@@ -1,0 +1,238 @@
+## intent:saludo
+- hola
+- quiubo
+- qué tal?
+- buenos días
+- buenas noches
+- buenas tardes
+- qué mas?
+- como va todo?
+- como estas?
+- qué onda?
+- qué pasa?
+- cordial saludo
+- saludos
+- buenas
+- como vas?
+- tonces
+- como has estado
+- qué cuentas?
+- hola factu
+- buen día
+
+## intent:pagoFactura
+- quiero pagar mi fatura
+- ayudame a pagar mi factura por favor
+- me puedes ayudar con mi factura?
+- paga mi factura
+- tengo que pagar
+- pagame mi factura
+- paga la factura por mi
+- genera el link de pago de mi factura
+- todavía no he pagado mi factura
+- tengo muchas facturas por pagar
+- factura
+- tengo una factura por pagar
+- puedes pagar facturas?
+- si te pido que me ayudes a pagar una factura, lo harías?
+- paga mi recibo
+- tengo un recibo para pagar
+- paga mi recibo que acabó de llegar
+- recibo
+- quiero pagar un recibo
+- genera un link para este recibo
+- ayudame con este recibo
+
+## intent:pagoFactura+infoFactura
+- paga mi factura con numero de cuenta [123345](numeroFactura) de la empresa [codensa](empresa)
+- necesito el link del banco para pagar la factura del [agua](tipoFactura)
+- tengo que pagar la factura del [agua](tipoFactura)
+- mi numero de factura es [13545-5](numeroFactura), pagala por favor.
+- tengo una factura del [acueducto de bogotá](empresa)
+- paga mi recibo de la [chec](empresa) con numero de recaudo [637821](numeroFactura)
+- paga esta factura: numero de cliente [85639846](numeroFactura) de la [enel](empresa)
+- tengo una factura con numero de pago [76532](numeroFactura)  de [codensa](empresa), pagala porfa
+- paga mi factura de la [chec](empresa)
+- genera un link de pago para mi factura de [codensa](empresa)
+- quiero pagar mi factura de [efigas](empresa)
+- ya tengo el recibo de [vanti](empresa), pagalo por favor
+- paga mi recibo del [acueducto de bogotá](empresa)
+- quiero pagar mi recibo con número [646463](numeroFactura)
+- el recibo tiene número de recaudo [6463-2](numeroFactura), genera el link
+- paga esta factura cuyo numero es [478343](numeroFactura)
+- el número de mi recibo es [6746463](numeroFactura), sería bueno si lo pagaras
+- el numero de cliente de mi recibo es [74774-5](numeroFactura), pagalo
+- tengo una factura con numero de recaudo [477382](numeroFactura), ya sabes que hacer
+- tengo una factura de [codensa](empresa), ya sabes que hacer
+- llego mi factura con numero de cliente [646734-2](numeroFactura) de [codensa](empresa), ya sabes que hacer
+- paga mi recibo del [agua](tipoFactura), tiene numero de cliente [784873-2](numeroFactura) y es de la [enel](empresa)
+- llegó el recibo de [codensa](empresa), tiene numero [83923](numeroFactura). Sería bueno si me pudieras ayudar pagándolo
+- paga mi factura del [agua](tipoFactura)
+- quiero que pagues mi recibo de la [energia](tipoFactura)
+- ayudame a pagar el recibo de la [electricidad](tipoFactura)
+- paga el recibo de la [electricidad](tipoFactura)
+- tengo un nuevo recibo de [gas](tipoFactura)
+- llegó mi factura del [gas](tipoFactura), ayudame
+- que hago con este recibo del [agua](tipoFactura)
+- paga mi recibo de la [energia](tipoFactura)
+- quiero pagar mi factura de [electricidad](tipoFactura)
+- quiero pagar mi factura de [agua](tipoFactura)
+- quiero pagar mi factura del [gas](tipoFactura)
+- paga mi fatura de la [luz](tipoFactura)
+- tengo un nuevo recibo de [luz](tipoFactura)
+
+## intent:infoFactura
+- [532525](numeroFactura) de [codensa](empresa)
+- el número de cliente es [532737](numeroFactura)
+- el número de usuario es [532737](numeroFactura)
+- número para pagos es [532737](numeroFactura)
+- el número de factura es [532737](numeroFactura)
+- el número de pago es [532737](numeroFactura)
+- el número es [76427632](numeroFactura)
+- numero [2363-6](numeroFactura)
+- [63626](numeroFactura)
+- este es el numero de la factura [652353](numeroFactura)
+- la empresa es [enel codensa](empresa)
+- empresa [acueducto de bogotá](empresa)
+- la factura es de la [chec](empresa)
+- numero [53672-1](numeroFactura), empresa [vanti](empresa)
+- el número de cliente es [532737](numeroFactura) de la empresa [vanti](empresa)
+- el número de usuario es [532737](numeroFactura) para la empresa [codensa](empresa)
+- número para pagos es [532737](numeroFactura) de la [chec](empresa)
+- el número de factura es [532737](numeroFactura), empresa [acueducto de bogotá](empresa)
+- el número de pago es [532737](numeroFactura) del [acueducto de bogotá](empresa)
+- el número es [76427632](numeroFactura) de [enel](empresa)
+- numero [2363-6](numeroFactura) empresa [acueducto de bogotá](empresa)
+- de [codensa](empresa)
+- [enel codensa](empresa)
+- [codensa enel](empresa)
+- [enel](empresa)
+- [codensa](empresa)
+- [vanti](empresa)
+- [chec](empresa)
+- [aguas de Manizales](empresa)
+- [efigas](empresa)
+
+## intent:afirmacion
+- si
+- claro
+- afirmativo
+- claro que si
+- pues si
+- está bien
+- ok
+- por favor
+- si, por favor
+- si quiero
+- bueno
+- bueno, hagamosle
+- okay
+- hagamosle
+- dale
+- de una
+- yeah
+- oki
+- sip
+- sisas
+- sikas
+- bien
+- listo
+
+## intent:negacion
+- no
+- negativo
+- no creo
+- para la próxima
+- no, para la próxima
+- no, nada
+- mejor no
+- no quiero pagar otra factura
+- quizás después
+- ne
+- meh
+- nop
+- ni por el putas
+- nonas
+- nokas
+- en otra oportunidad
+- tal vez luego
+- tal vez despues
+- aún no
+- ahora no
+- jamás
+- no, todo está bien así
+
+## intent:gracias
+- gracias
+- te lo agradezco
+- mil gracias
+- muchas gracias
+- michisimas gracias
+- un millon de gracias
+- estoy muy agradecido
+- estoy muy agradecida
+- se lo agradezco
+- gracias por todo
+- qué amable
+- no tengo palabras para agradecerte
+- gracias totales
+- quiero agradecerte
+- fuiste de mucha ayuda
+- agradezco tu ayuda
+- gracias por ayudarme a pagar mi factura
+- eres de mucha utilidad
+- tu ayuda fue de mucha utilidad
+- quedo muy agradecido
+
+## intent:yaRegistrado
+- parece ser que ya estoy registrado
+- ya completé el registro en la pagina
+- ya me registré en la página de FACTU
+- ya complete mi registro
+- ya quedaron mis datos
+- registré mis datos en la página
+- mis datos de pse etán registrados
+- ya quedó el correo y banco
+- listo, todo quedó
+- quedé registrado
+- mi registro está completado
+- todo quedó completado
+- registro completo
+- todo quedó listo
+- registrado
+
+## intent:explicarInfo
+- para qué necesitas esta información?
+- qué vas a hacer con esta información?
+- por qué debería darte mis datos?
+- qué vas a hacer con mi correo?
+- qué vas a hacer con la información de mi banco?
+- no se si darte mi información
+- para qué quieres saber mi banco?
+- no estoy muy seguro de darte esa información
+- por qué debería darte esta información?
+- es completamente necesario darte mi información?
+- no quiero darte mi información de correo
+- no quiero darte mi información del banco
+- son necesarios estos datos para completar la transacción?
+- cual es la razón por la que necesitas esta información?
+- qué razón tienes para pedirme estos datos?
+- no estoy completamente seguro de brindarte esta información
+- por qué debería darte estos datos que me estas pidiendo?
+- no creo poder darte estos datos
+- es dificil darte esta información
+
+## synonym:codensa
+- enel
+- enel codensa
+
+## synonym:electricidad
+- energia
+- energía
+- luz
+
+## synonym:acueducto de bogota
+
+- acueducto de bogotá
+- acueducto de Bogotá
+- acueducto de Bogota

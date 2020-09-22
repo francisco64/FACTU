@@ -1,0 +1,109 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- saludo
+- pagoFactura
+- pagoFactura+infoFactura
+- infoFactura
+- afirmacion
+- negacion
+- gracias
+- yaRegistrado
+- explicarInfo
+entities:
+- numeroFactura
+- empresa
+- tipoFactura
+slots:
+  banco:
+    type: unfeaturized
+  correoPSE:
+    type: unfeaturized
+  empresa:
+    type: text
+  errorRPA:
+    type: categorical
+    values:
+    - no
+    - si
+  facturaRegistrada:
+    type: categorical
+    values:
+    - no
+    - si
+  id:
+    type: unfeaturized
+  nombre:
+    type: unfeaturized
+  numeroFactura:
+    type: text
+  numeroWpp:
+    type: unfeaturized
+  tipoFactura:
+    type: text
+  usuarioRegistrado:
+    type: categorical
+    values:
+    - no
+    - si
+responses:
+  utter_sonriente:
+  - text: 😃
+  utter_saludo:
+  - text: Hola, recuerda que puedo ayudarte a pagar tus facturas de agua, gas y electricidad.
+  - text: Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del
+      agua, gas y electricidad.
+  - text: Hola! quiero ayudarte a pagar tus facturas del agua, gas o electricidad.
+  - text: Hola! que bueno saludarte hoy. Puedo ayudarte a pagar tus facturas de agua,
+      gas y electricidad.
+  utter_enQueTeAyudo:
+  - text: Cuéntame {nombre}, en qué puedo ayudarte?
+  - text: Dime {nombre}, en que te puedo ayudar?
+  - text: En qué te puedo ayudar hoy, {nombre}?
+  - text: Dime lo que quieres hacer y te ayudaré con eso, {nombre}!
+  utter_noRegistrado:
+  - text: Veo que todavía no estás registrado. Para poder ayudarte a pagar tus facturas
+      registrate en factu.co/registro
+  utter_queNumeroFactura:
+  - text: Cual es el número de factura de la empresa {empresa}?
+  utter_queEmpresa:
+  - text: La factura que quieres pagar con numero {numeroFactura} de qué empresa es?
+  utter_enviaFactura:
+  - text: Envíame una foto de tu factura o un pantallazo si la tienes en el correo.
+      Si quieres también puedes darme el número para pagos y la empresa
+  utter_generareLink:
+  - text: Generaré el link de pago para la factura {numeroFactura}, empresa {empresa}.
+      Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad
+  utter_guardarFactura:
+  - text: Deseas guardar esta factura para futuros pagos? Con esto solo me tendras
+      que decir, paga mi factura de agua o gas, o incluso paga mi factura de {empresa}
+      y listo!
+  utter_guardadoExitoso:
+  - text: listo! tu factura ha quedado guardada para futuros pagos
+  utter_algoMas:
+  - text: Puedo ayudarte en algo más?
+  - text: Hay algo más qué pueda hacer por ti?
+  - text: Te gustaría que te ayudara en algo más o así está bien?
+  - text: Quieres que te ayude con algo más?
+  utter_fueUnPlacer:
+  - text: Para servirte, fue un placer! Estaré esperando en caso en que necesites
+      algo más
+  - text: Fue un placer haberte ayudado, si necesitas algo más estaré aquí
+  - text: Fue un placer! cuéntame si necesitas algo más
+  utter_yaPagado:
+  - text: Ya has pagado anteriormente una factura de {tipoFactura} de la entidad {empresa}
+      con número {numeroFactura}. Quieres pagarla nuevamente?
+  utter_queCambio:
+  - text: Dime qué quieres cambiar?
+  utter_sigueSinRegistro:
+  - text: Parece ser que sigues sin estar registrado. Registrate en factu.co/registro
+  utter_confirmarFactura:
+  - text: Pagaré tu factura con numero {numeroFactura}, empresa {empresa}. Es correcto?
+  utter_correccion:
+  - text: Cuales son los datos que quieres corregir?
+actions:
+- validarRegistro
+- buscarFactura
+- generarLinkRPA
+- guardarFactura

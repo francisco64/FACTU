@@ -1,0 +1,16 @@
+version: '3.0'
+services:
+  rasa:
+    image: fasttext-image:v1
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command: run -m models --credentials credentials.yml --enable-api --log-file out.log --debug
+  Action-Server:
+    image: actions:latest
+    restart: on-failure
+    volumes:
+      - ./actions:/app/actions
+    ports:
+      - 5055:5055
