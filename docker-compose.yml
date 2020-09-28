@@ -1,16 +1,23 @@
 version: '3.0'
 services:
   rasa:
-    image: fasttext-image:v1
+    image: franciscoreales1/factu:v1
     ports:
       - 5005:5005
     volumes:
       - ./:/app
-    command: run -m models --credentials credentials.yml --enable-api --log-file out.log --debug
+    command: run -m models --credentials credentials.yml --enable-api --log-file out.log --endpoints endpoints2.yml --debug
   Action-Server:
-    image: actions:latest
+    image: franciscoreales1/actions:v1
     restart: on-failure
     volumes:
       - ./actions:/app/actions
     ports:
       - 5055:5055
+#  mongo:
+#    image: mongo
+#    volumes:
+#      - ./mongo:/data/db
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: admin
+#      MONGO_INITDB_ROOT_PASSWORD: Hostinguer.123

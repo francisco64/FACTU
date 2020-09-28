@@ -80,6 +80,7 @@
 - quiero pagar mi factura del [gas](tipoFactura)
 - paga mi fatura de la [luz](tipoFactura)
 - tengo un nuevo recibo de [luz](tipoFactura)
+- paga la [luz]{"entity": "tipoFactura", "value": "electricidad"}[luz]{"entity": "tipoFactura", "value": "electricidad"}
 
 ## intent:infoFactura
 - [532525](numeroFactura) de [codensa](empresa)
@@ -137,6 +138,7 @@
 - sikas
 - bien
 - listo
+- sí
 
 ## intent:negacion
 - no
@@ -222,6 +224,11 @@
 - no creo poder darte estos datos
 - es dificil darte esta información
 
+## synonym:acueducto de bogota
+- acueducto de bogotá
+- acueducto de Bogotá
+- acueducto de Bogota
+
 ## synonym:codensa
 - enel
 - enel codensa
@@ -230,9 +237,3 @@
 - energia
 - energía
 - luz
-
-## synonym:acueducto de bogota
-
-- acueducto de bogotá
-- acueducto de Bogotá
-- acueducto de Bogota
