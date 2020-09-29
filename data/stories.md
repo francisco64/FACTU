@@ -4,7 +4,7 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* pagoFactura OR yaRegistrado OR pagoFactura+infoFactura   
+* pagoFactura OR yaRegistrado OR pagoFactura+infoFactura 
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_sigueSinRegistro
@@ -17,7 +17,7 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* yaRegistrado   
+* yaRegistrado 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_enQueTeAyudo
@@ -28,7 +28,7 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* pagoFactura  
+* pagoFactura 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_enviaFactura
@@ -39,7 +39,7 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* pagoFactura+infoFactura{"tipoFactura":"agua"}  
+* pagoFactura+infoFactura{"tipoFactura":"agua"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_enviaFactura
@@ -51,8 +51,8 @@
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
 * afirmacion
-  - utter_sonriente  
-* pagoFactura+infoFactura{"tipoFactura":"agua"}  
+  - utter_sonriente 
+* pagoFactura+infoFactura{"tipoFactura":"agua"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_enviaFactura
@@ -65,7 +65,7 @@
   - utter_noRegistrado
 * afirmacion
   - utter_sonriente
-* yaRegistrado    
+* yaRegistrado 
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_sigueSinRegistro
@@ -84,7 +84,7 @@
   - utter_noRegistrado
 * afirmacion
   - utter_sonriente
-* yaRegistrado    
+* yaRegistrado 
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_sigueSinRegistro
@@ -103,7 +103,7 @@
   - utter_noRegistrado
 * afirmacion
   - utter_sonriente
-* yaRegistrado    
+* yaRegistrado 
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_sigueSinRegistro
@@ -122,7 +122,7 @@
   - utter_noRegistrado
 * afirmacion
   - utter_sonriente
-* yaRegistrado    
+* yaRegistrado 
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_sigueSinRegistro
@@ -139,7 +139,7 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* pagoFactura+infoFactura{"numeroFactura":"745634-3","empresa":"codensa"}  
+* pagoFactura+infoFactura{"numeroFactura":"745634-3","empresa":"codensa"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_enviaFactura
@@ -152,7 +152,7 @@
   - utter_noRegistrado
 * afirmacion
   - utter_sonriente
-* pagoFactura+infoFactura{"numeroFactura":"745634-3","empresa":"codensa"}  
+* pagoFactura+infoFactura{"numeroFactura":"745634-3","empresa":"codensa"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_enviaFactura
@@ -163,11 +163,11 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* pagoFactura+infoFactura{"numeroFactura":"745634-3"}  
+* pagoFactura+infoFactura{"numeroFactura":"745634-3"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_queEmpresa
-* infoFactura{"empresa":"acueducto de bogotá"}  
+* infoFactura{"empresa":"acueducto de bogotá"} 
   - utter_confirmarFactura
 
 ## usuario no registrado
@@ -178,11 +178,11 @@
   - utter_noRegistrado
 * afirmacion
   - utter_sonriente
-* pagoFactura+infoFactura{"numeroFactura":"745634-3"}  
+* pagoFactura+infoFactura{"numeroFactura":"745634-3"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_queEmpresa
-* infoFactura{"empresa":"acueducto de bogotá"}  
+* infoFactura{"empresa":"acueducto de bogotá"} 
   - utter_confirmarFactura
 
 ## usuario no registrado
@@ -191,11 +191,11 @@
   - validarRegistro
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
-* pagoFactura+infoFactura{"empresa":"chec"}  
+* pagoFactura+infoFactura{"empresa":"chec"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_queNumeroFactura
-* infoFactura{"numeroFactura":"3627632-2"}  
+* infoFactura{"numeroFactura":"3627632-2"} 
   - utter_confirmarFactura
 
 ## usuario no registrado
@@ -205,12 +205,12 @@
   - slot{"usuarioRegistrado":"no"}
   - utter_noRegistrado
 * afirmacion
-  - utter_sonriente  
-* pagoFactura+infoFactura{"empresa":"chec"}  
+  - utter_sonriente 
+* pagoFactura+infoFactura{"empresa":"chec"} 
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - utter_queNumeroFactura
-* infoFactura{"numeroFactura":"3627632-2"}  
+* infoFactura{"numeroFactura":"3627632-2"} 
   - utter_confirmarFactura
 
 ##usuario registrado + pagoFactura sin entities + infoFactura (empresa y numero) +datos estan bien+no hay error rpa+no necesita algo mas
@@ -218,7 +218,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura
   - utter_enviaFactura
 * infoFactura{"empresa":"acueducto de bogotá","numeroFactura":"44252-5"}
@@ -229,7 +229,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -249,7 +249,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -302,7 +302,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura
   - utter_enviaFactura
 * infoFactura{"empresa":"acueducto de bogotá","numeroFactura":"44252-5"}
@@ -317,14 +317,14 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura
   - utter_enviaFactura
 * infoFactura{"numeroFactura":"63536-4"}
   - buscarFactura
   - slot{"facturaRegistrada":"no"}
   - utter_queEmpresa
-* infoFactura{"empresa":"acueducto de bogotá"}  
+* infoFactura{"empresa":"acueducto de bogotá"} 
   - utter_confirmarFactura
 * afirmacion
   - utter_generareLink
@@ -332,7 +332,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -344,14 +344,14 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura
   - utter_enviaFactura
 * infoFactura{"empresa":"acueducto de bogotá"}
   - buscarFactura
   - slot{"facturaRegistrada":"no"}
   - utter_queNumeroFactura
-* infoFactura{"numeroFactura":"63536-4"}  
+* infoFactura{"numeroFactura":"63536-4"} 
   - utter_confirmarFactura
 * afirmacion
   - utter_generareLink
@@ -359,7 +359,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -371,18 +371,18 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura
   - utter_enviaFactura
 * infoFactura{"numeroFactura":"535356-2"}
   - buscarFactura
   - slot{"facturaRegistrada":"no"}
   - utter_queEmpresa
-* infoFactura{"empresa":"chec"}  
+* infoFactura{"empresa":"chec"} 
   - utter_confirmarFactura
 * afirmacion
   - utter_generareLink
-  - generarLinkRPA  
+  - generarLinkRPA 
   - slot{"errorRPA":"si"}
 
 ##usuario registrado+pago de factura con numero + factura no existe  + datos estan bien + no hya error rpa
@@ -390,7 +390,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"numeroFactura":"53535-4"}
   - buscarFactura
   - slot{"facturaRegistrada":"no"}
@@ -399,15 +399,15 @@
   - utter_confirmarFactura
 * afirmacion
   - utter_generareLink
-  - generarLinkRPA   
+  - generarLinkRPA 
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
-* afirmacion OR gracias  
+* afirmacion OR gracias 
   - utter_sonriente
 
 ##--
@@ -514,7 +514,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"empresa":"codensa"}
   - buscarFactura
   - slot{"facturaRegistrada":"no"}
@@ -527,7 +527,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -539,12 +539,12 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"empresa":"acueducto de bogotá","numeroFactura":"44252-5"}
   - utter_confirmarFactura
 * afirmacion
   - utter_generareLink
-  - generarLinkRPA   
+  - generarLinkRPA 
   - slot{"errorRPA":"si"}
 
 ##usuario registrado + pagoFactura + infoFactura (con tipo de factura) +datos estan bien+ no hubo error rpa
@@ -552,7 +552,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"tipoFactura":"agua"}
   - buscarFactura
   - slot{"facturaRegistrada":"no"}
@@ -565,11 +565,11 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
-* afirmacion OR gracias  
+* afirmacion OR gracias 
   - utter_sonriente
 
 ##fue un placer----ok
@@ -582,7 +582,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"tipoFactura":"agua"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -605,7 +605,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"empresa":"codensa"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -628,7 +628,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"empresa":"codensa"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -649,7 +649,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"numeroFactura":"63663-2"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -663,7 +663,7 @@
   - slot{"errorRPA":"no"}
   - utter_algoMas
 * negacion
-  - utter_fueUnPlacer  
+  - utter_fueUnPlacer 
 * afirmacion OR gracias
   - utter_sonriente
 
@@ -672,7 +672,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"numeroFactura":"63663-2"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -691,7 +691,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -703,7 +703,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"empresa":"enel"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -722,7 +722,7 @@
   - slot{"errorRPA":"no"}
   - utter_guardarFactura
 * afirmacion
-  - guardarFactura  
+  - guardarFactura 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -731,7 +731,7 @@
 
 ##no guarde la factura
   - utter_guardarFactura
-* negacion  
+* negacion 
   - utter_algoMas
 * negacion
   - utter_fueUnPlacer
@@ -740,7 +740,7 @@
 
 ##no guarde factura
   - utter_guardarFactura
-* negacion  
+* negacion 
   - utter_algoMas
 * afirmacion
   - utter_enQueTeAyudo
@@ -750,7 +750,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"tipoFactura":"agua"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
@@ -766,7 +766,7 @@
   - utter_saludo
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
-  - utter_enQueTeAyudo  
+  - utter_enQueTeAyudo 
 * pagoFactura+infoFactura{"tipoFactura":"agua"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}

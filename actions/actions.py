@@ -12,67 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-#from factuSQL import validarUsuario, validarFactura, registrarFacturaDB
-import pymysql as sql
-
-def validarUsuario(numeroWpp):
-
-    consulta='''select id, nombre, correoPSE, banco from userData where numeroWpp = "xyzpq";'''.replace('xyzpq',numeroWpp)
-    cursor.execute(consulta)
-    infoUsuario=cursor.fetchall()
-    if len(infoUsuario)==0:
-        infoUsuario=False
-    else:
-        infoUsuario=[infoUsuario[0][0],infoUsuario[0][1].split(' ')[0],infoUsuario[0][2],infoUsuario[0][3]]
-    return infoUsuario
-
-def validarFactura(id_usuario,numeroFactura,empresa,tipoFactura):
-    if tipoFactura is None and empresa is None and numeroFactura is None:
-        datosFactura=False
-        return datosFactura
-    if tipoFactura is not None:
-        consulta='''select numeroFactura,empresa,tipoFactura FROM userData
-        INNER JOIN facturas
-        ON usuarios.userData.id  = usuarios.facturas.id
-        where usuarios.userData.id = xyzpk and tipoFactura="xyzlp"
-        ;'''.replace('xyzpk',id_usuario).replace('xyzlp',tipoFactura)
-    elif empresa is not None:
-        consulta='''select numeroFactura,empresa,tipoFactura FROM userData
-        INNER JOIN facturas
-        ON usuarios.userData.id  = usuarios.facturas.id
-        where usuarios.userData.id = xyzpk and empresa="xyzlp"
-        ;'''.replace('xyzpk',id_usuario).replace('xyzlp',empresa)
-    elif numeroFactura is not None:
-        consulta='''select numeroFactura,empresa,tipoFactura FROM userData
-        INNER JOIN facturas
-        ON usuarios.userData.id  = usuarios.facturas.id
-        where usuarios.userData.id = xyzpk and numeroFactura="xyzlp"
-        ;'''.replace('xyzpk',id_usuario).replace('xyzlp',numeroFactura)
-
-    cursor.execute(consulta)
-    datosFactura=cursor.fetchall()
-    if len(datosFactura)==0:
-        datosFactura=False
-    else:
-        datosFactura=[datosFactura[0][0],datosFactura[0][1],datosFactura[0][2]]
-    return datosFactura
-def registrarFacturaDB(id_usuario,numeroFactura,empresa,tipoFactura):
-    if id_usuario is None or numeroFactura is None or empresa is None or tipoFactura is None:
-        return False
-    else:
-        consulta='''
-        insert into facturas(id, numeroFactura, empresa, tipoFactura) values (id_usuario,"xyzpq", "xyzok","xyzso")
-        ;'''.replace("id_usuario",id_usuario).replace("xyzpq",numeroFactura).replace("xyzok",empresa).replace("xyzso",tipoFactura)
-        cursor.execute(consulta)
-        db.commit()
-        return True
-
-db=sql.connect('factu-db.c15hdm9dgrjl.us-east-2.rds.amazonaws.com','admin','Hostinguer.123')
-
-cursor=db.cursor()
-
-query='''use usuarios'''
-cursor.execute(query)
+from actions.factuSQL import validarUsuario, validarFactura, registrarFacturaDB
 
 def generarTipoFactura(empresa):
     switcher={
