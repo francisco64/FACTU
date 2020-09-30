@@ -1,6 +1,6 @@
 session_config:
   session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+  carry_over_slots_to_new_session: false
 intents:
 - saludo
 - pagoFactura
@@ -11,6 +11,8 @@ intents:
 - gracias
 - yaRegistrado
 - explicarInfo
+- feedback
+- infoFeedback
 entities:
 - numeroFactura
 - empresa
@@ -50,6 +52,10 @@ slots:
 responses:
   utter_sonriente:
   - text: 😃
+  utter_enQuePiensas:
+  - text: Cuentame en que estás pensando... 🤔
+  utter_mandarCreadores:
+  - text: Le enviaré tus comentarios a mis creadores inmediatamente, gracias por tomarte el tiempo🥳 
   utter_saludo:
   - text: Hola, recuerda que puedo ayudarte a pagar tus facturas de agua, gas y electricidad.
   - text: Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del
@@ -107,3 +113,4 @@ actions:
 - buscarFactura
 - generarLinkRPA
 - guardarFactura
+- guardarFeedback

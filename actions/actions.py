@@ -34,6 +34,10 @@ class validarRegistroUsuario(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         numeroWpp="+573003445373"
+#        if tracker.get_current_state().get('latest_input_channel')=='twilio':
+#            numeroWpp=tracker.current_state()['sender_id'].split(':')[1] 
+#        else: numeroWpp="+573003445373"
+        
         datosUsuario=validarUsuario(numeroWpp)
         if datosUsuario==False:
             #tracker.slots['usuarioRegistrado']="no"
@@ -111,3 +115,18 @@ class guardarFactura(Action):
                 dispatcher.utter_message(text='La factura se ha guardado exitosamente')
             else:
                 dispatcher.utter_message(text='La factura no se ha podido guardar')
+            return []    
+                
+                
+class GuardarFeedback(Action):
+
+    def name(self) -> Text:
+        return "guardarFeedback"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+    		print('se ha guardado el feedback')		
+    			
+    		return []                
+                    

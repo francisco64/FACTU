@@ -16,7 +16,7 @@
 - como vas?
 - tonces
 - como has estado
-- qué cuentas?
+- qué cuentas?f
 - hola factu
 - buen día
 
@@ -80,7 +80,7 @@
 - quiero pagar mi factura del [gas](tipoFactura)
 - paga mi fatura de la [luz](tipoFactura)
 - tengo un nuevo recibo de [luz](tipoFactura)
-- paga la [luz]{"entity": "tipoFactura", "value": "electricidad"}[luz]{"entity": "tipoFactura", "value": "electricidad"}
+- paga la [luz]{"entity": "tipoFactura", "value": "electricidad"}
 
 ## intent:infoFactura
 - [532525](numeroFactura) de [codensa](empresa)
@@ -224,10 +224,81 @@
 - no creo poder darte estos datos
 - es dificil darte esta información
 
+## intent:feedback
+- tengo una idea
+- quisiera hablar con tus creadores
+- tengo una idea que les podría ser de mucha utilidad 
+- tengo algo que decir para que puedan mejorar a factu
+- tengo una idea que quizá puedan implementar 
+- se me ocurrió una idea
+- creo que deberían mejorar a factu
+- qusiera dar feedback sobre factu
+- quisiera ofrecer realimentacion 
+- quisiera ofrecer realimentacion de factu
+- quiero dar mi punto de vista sobre la aplicación
+- quiero expresar lo que pienso de la aplicación 
+- puedo dar mi opinion de factu?
+- voy a dar mi opinión hasta el momento
+- feedback
+- realimentación
+- retroalimentación 
+- creo que sería bueno darles mi opinion de factu
+- creo que sería bueno darles mi punto de vista sobre factu
+- tengo una realimentación que dar
+
+## intent:infoFeedback
+- tengo una idea, porque no hacen que el chatbot pregunte por un tema y despues se lo de al usuario
+- la aplicación me ha gustado mucho
+- la aplicación me ha parecido terrible
+- en mi opinión es una buena aplicación pero no deberia hacer esto y lo otro
+- que tal si hicieran que  
+- quisiera comentarle a tus creadores que la aplicación no me ha gustado porque un dia quise pagar una factura y no pude
+- que tal si añaden estas caracteristicas: primero, factu deberia preguntar por y hacer 
+- la aplcación es muy novedosa, los felicito
+- ya había visto esto antes en otra aplicacion 
+- deberían implementar esta caracteristica y la otra caracteristica
+- algo que me gusto fue que el chatbot hace x pero tambien deberia hacer y
+- me gustaría que implementaran que el chatbot hiciera una pregunta y despues la respuesta
+- aunque la aplicación me parece muy util, deberian mejorar en alguhnos aspectos
+- me gusta
+- sería muy útil que implementaran que el chatbot pudiera decir esto 
+- una muy buena idea prodría ser que no solo pagara facturas sino que pudiera volar
+- no me disgusta, pero tiene muchos errores
+- es perfecto
+- tiene cosas por mejorar
+- me gustaría que hiciera algo mas que pagar facturas
+- que apliaran los pagos disponibles
+- que se pudiara pagar adicionalmente la factura del aseo
+- que ademas pudiera pagar los impuestos
+- adicionalmente deberia pagar los impuestos del carro
+- tambien puede funcionar para getionar un pago del cine o algo así 
+- la aplicacion me gusta, se podria volver un asistente multitarea muy util
+- la aplicación es inutil, no pude pagar mi factura y no entiende lo que digo
+- hasta el momento ha funcionado muy bien
+- por qué la aplicación no deja pagar el aseo?
+- excelente
+- se volvió la aplicación predilecta para hacer mis pagos
+- se ha vuelvo mi unica forma para pagar las facturas
+- buenisima
+- muy util       
+
 ## synonym:acueducto de bogota
 - acueducto de bogotá
 - acueducto de Bogotá
 - acueducto de Bogota
+- acueducto bogota
+- acueducto bogotá
+- acueduto bogota
+- acueduto bogotá
+- Acueducto de bogotá
+- Acueducto de Bogotá
+- Acueducto de Bogota
+- Acueducto bogota
+- Acueducto bogotá
+- Acueduto bogota
+- Acueduto bogotá
+- acueduto de bogota
+- acueduto de bogotá
 
 ## synonym:codensa
 - enel

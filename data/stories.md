@@ -911,3 +911,19 @@
     - utter_fueUnPlacer
 * afirmacion
     - utter_sonriente
+  
+    
+## feedback
+* feedback
+    - utter_enQuePiensas  
+* infoFeedback    
+    - utter_mandarCreadores
+    - guardarFeedback
+* afirmacion OR gracias
+  - utter_sonriente      
+## feedback con info
+* infoFeedback    
+    - utter_mandarCreadores  
+    - guardarFeedback  
+* afirmacion OR gracias
+  - utter_sonriente      
