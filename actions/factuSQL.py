@@ -59,13 +59,28 @@ def registrarFacturaDB(id_usuario,numeroFactura,empresa,tipoFactura):
         cursor.execute(consulta)
         db.commit()
         return True
-    
+def guardarFB(id_usuario,nombre_usuario,correo_pse,numero_wpp,feed_back):
+    if id_usuario is not None:
+        consulta='''
+        insert into userFeedback(id,nombre,correoPSE,numeroWPP,feedback) values (id_usuario,"nombre_usuario", "correo_pse","numero_wpp","feed_back")
+        ;'''.replace("id_usuario",str(id_usuario)).replace("nombre_usuario",str(nombre_usuario)).replace("correo_pse",str(correo_pse)).replace("numero_wpp",str(numero_wpp)).replace("feed_back",str(feed_back))
+        cursor.execute(consulta)
+        db.commit()
+        print("guardado exitoso")
+        return []
+    else:
+        print("no se pudo guardar")
+        return []
+
+
 db=sql.connect('factu-db.c15hdm9dgrjl.us-east-2.rds.amazonaws.com','admin','Hostinguer.123')
 
 cursor=db.cursor()
 
 query='''use usuarios'''
 cursor.execute(query)
+
+
 
 # numeroFactura='5555'#None
 # empresa='chec'#None

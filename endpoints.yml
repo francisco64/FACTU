@@ -17,16 +17,16 @@ action_endpoint:
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/api/tracker-stores/
 
-tracker_store:
-  type: "mongod"
-  url: "mongodb+srv://admin:Hostinguer.123@cluster-factu.i2jst.mongodb.net/factu-db?retryWrites=true&w=majority"
-  db: "factu-db"
-  collection: "collection-factu"
-  username: "admin"
-  password: "Hostinguer.123"
-
-event_broker:
-  type: SQL
-  dialect: sqlite
-  db: events.db
+#tracker_store:
+#  type: "mongod"
+#  url: "mongodb+srv://admin:Hostinguer.123@cluster-factu.i2jst.mongodb.net/factu-db?retryWrites=true&w=majority"
+#  db: "factu-db"
+#  collection: "collection-factu"
+#  username: "admin"
+#  password: "Hostinguer.123"
+#
+#event_broker:
+#  type: SQL
+#  dialect: sqlite
+#  db: events.db
 

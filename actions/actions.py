@@ -12,7 +12,7 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from actions.factuSQL import validarUsuario, validarFactura, registrarFacturaDB
+from actions.factuSQL import validarUsuario, validarFactura, registrarFacturaDB, guardarFB
 
 def generarTipoFactura(empresa):
     switcher={
@@ -50,7 +50,7 @@ class validarRegistroUsuario(Action):
             banco=datosUsuario[3]
             print('el usuario si esta registrado con '+'correo: '+correo+ ' y '+' banco: '+banco) #correo: '+tracker.get_slot('correoPSE')+' banco: '+tracker.get_slot('banco'))
             #dispatcher.utter_message(text='el slot usuarioRegistrado es '+ str(tracker.get_slot('usuarioRegistrado')))
-            return [SlotSet('usuarioRegistrado', 'si'),SlotSet('correoPSE', correo),SlotSet('banco', banco),SlotSet('id', id),SlotSet('nombre', nombre)]
+            return [SlotSet('usuarioRegistrado', 'si'),SlotSet('correoPSE', correo),SlotSet('banco', banco),SlotSet('id', id),SlotSet('nombre', nombre),SlotSet('numeroWpp', numeroWpp)]
 class BuscarFactura(Action):
 
     def name(self) -> Text:
@@ -126,7 +126,11 @@ class GuardarFeedback(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-    		print('se ha guardado el feedback')		
-    			
-    		return []                
-                    
+            id_usuario=tracker.get_slot('id')
+            nombre_usuario=tracker.get_slot('nombre')
+            correo_pse=tracker.get_slot('correoPSE')
+            numero_wpp=tracker.get_slot('numeroWpp')
+            feed_back=tracker.latest_message['text']
+            guardarFB(id_usuario,nombre_usuario,correo_pse,numero_wpp,feed_back)
+            return []
+                        

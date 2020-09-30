@@ -915,6 +915,7 @@
     
 ## feedback
 * feedback
+    - validarRegistro
     - utter_enQuePiensas  
 * infoFeedback    
     - utter_mandarCreadores
@@ -923,6 +924,7 @@
   - utter_sonriente      
 ## feedback con info
 * infoFeedback    
+    - validarRegistro
     - utter_mandarCreadores  
     - guardarFeedback  
 * afirmacion OR gracias

@@ -7416,3 +7416,56 @@ Exception: Failed to execute custom action.
 2020-09-29 22:00:25,299 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
 2020-09-29 22:00:25,299 [DEBUG]  Action 'action_listen' ended with events '[]'.
 2020-09-29 22:00:26,297 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-09-30 19:29:47,201 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-09-30 19:29:47,201 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-09-30 19:29:47,202 [DEBUG]  Using the default number of Sanic workers (1).
+2020-09-30 19:29:47,205 [INFO ]  Enabling coroutine debugging. Loop id 94260350291968.
+2020-09-30 19:29:47,602 [DEBUG]  Extracted model to '/tmp/tmp7u5vcdzu'.
+2020-09-30 19:29:48,027 [DEBUG]  Loading the model ...
+2020-09-30 19:29:48,927 [DEBUG]  Finished loading the model.
+2020-09-30 19:29:48,927 [DEBUG]  Building tensorflow prediction graph...
+2020-09-30 19:29:54,456 [DEBUG]  Finished building tensorflow prediction graph.
+2020-09-30 19:29:59,120 [DEBUG]  Loading the model ...
+2020-09-30 19:29:59,563 [DEBUG]  Finished loading the model.
+2020-09-30 19:29:59,563 [DEBUG]  Building tensorflow prediction graph...
+2020-09-30 19:30:00,332 [DEBUG]  Finished building tensorflow prediction graph.
+2020-09-30 19:30:00,340 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-09-30 19:30:00,361 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-09-30 19:30:01,859 [DEBUG]  Connected to MongoTrackerStore.
+2020-09-30 19:30:01,860 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-09-30 19:30:02,296 [DEBUG]  Extracted model to '/tmp/tmprn5rz8zn'.
+2020-09-30 19:30:02,298 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-09-30 19:30:02,348 [DEBUG]  Loading the model ...
+2020-09-30 19:30:02,527 [DEBUG]  Finished loading the model.
+2020-09-30 19:30:02,528 [DEBUG]  Building tensorflow prediction graph...
+2020-09-30 19:30:03,390 [DEBUG]  Finished building tensorflow prediction graph.
+2020-09-30 19:30:03,395 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-09-30 19:30:03,395 [INFO ]  Rasa server is up and running.
