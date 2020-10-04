@@ -8,12 +8,14 @@ services:
       - ./:/app
     command: run -m models --credentials credentials.yml --enable-api --log-file out.log --endpoints endpoints2.yml --debug
   Action-Server:
-    image: franciscoreales1/actions:v1
+    image: franciscoreales1/actions:v1.1
     restart: on-failure
     volumes:
       - ./actions:/app/actions
     ports:
       - 5055:5055
+#  Chrome:
+#    image: selenium/standalone-chrome:85.0-20200921   
 #  mongo:
 #    image: mongo
 #    volumes:

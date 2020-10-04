@@ -427,13 +427,13 @@
   - utter_algoMas
 
 ##--
-* pagoFactura+infoFactura{"empresa":"efigas"}
+* pagoFactura+infoFactura{"empresa":"vanti"}
   - validarRegistro
   - slot{"usuarioRegistrado":"si"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
-  - slot{"tipoFactura":"agua"}
-  - slot{"empresa":"codensa"}
+  - slot{"tipoFactura":"gas"}
+  - slot{"empresa":"vanti"}
   - slot{"numeroFactura":"56253-2"}
   - utter_yaPagado
 * afirmacion
@@ -464,8 +464,8 @@
   - slot{"usuarioRegistrado":"si"}
   - buscarFactura
   - slot{"facturaRegistrada":"si"}
-  - slot{"tipoFactura":"agua"}
-  - slot{"empresa":"codensa"}
+  - slot{"tipoFactura":"gas"}
+  - slot{"empresa":"efigas"}
   - slot{"numeroFactura":"56253-2"}
   - utter_yaPagado
 * negacion

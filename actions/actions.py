@@ -13,6 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from actions.factuSQL import validarUsuario, validarFactura, registrarFacturaDB, guardarFB
+from actions.RPA_pagos import generar_link
 
 def generarTipoFactura(empresa):
     switcher={
@@ -84,9 +85,16 @@ class GenerarLink(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        error=False#obtener de la busqueda en la base de datos las facturas pagadas
-        link='https://davivienda.com/pagoFactura'
+        empresa=tracker.get_slot('empresa')
+        banco=tracker.get_slot('banco')
+        print('el banco es :'+str(banco))
+        correoPSE=tracker.get_slot('correoPSE')
+        numeroFactura=tracker.get_slot('numeroFactura')
+        link=generar_link(numeroFactura,empresa,banco,correoPSE)
+        #link=''
+        if len(link)>2:
+            error=False
+        else: error =True    
         if error==False:
             #tracker.slots['errorRPA']='no'
             print('no hay error')

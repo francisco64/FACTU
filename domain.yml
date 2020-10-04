@@ -55,7 +55,8 @@ responses:
   utter_enQuePiensas:
   - text: Cuentame en que estás pensando... 🤔
   utter_mandarCreadores:
-  - text: Le enviaré tus comentarios a mis creadores inmediatamente, gracias por tomarte el tiempo🥳 
+  - text: Le enviaré tus comentarios a mis creadores inmediatamente, gracias por tomarte
+      el tiempo🥳
   utter_saludo:
   - text: Hola, recuerda que puedo ayudarte a pagar tus facturas de agua, gas y electricidad.
   - text: Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del

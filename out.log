@@ -7469,3 +7469,146 @@ Exception: Failed to execute custom action.
 2020-09-30 19:30:03,390 [DEBUG]  Finished building tensorflow prediction graph.
 2020-09-30 19:30:03,395 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
 2020-09-30 19:30:03,395 [INFO ]  Rasa server is up and running.
+2020-10-02 21:28:55,180 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-02 21:28:55,180 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-02 21:28:55,181 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-02 21:28:55,183 [INFO ]  Enabling coroutine debugging. Loop id 94069065044480.
+2020-10-02 21:28:55,573 [DEBUG]  Extracted model to '/tmp/tmpw_l3dxj0'.
+2020-10-02 21:28:55,978 [DEBUG]  Loading the model ...
+2020-10-02 21:28:56,831 [DEBUG]  Finished loading the model.
+2020-10-02 21:28:56,831 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:29:02,692 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-02 21:29:07,389 [DEBUG]  Loading the model ...
+2020-10-02 21:29:07,821 [DEBUG]  Finished loading the model.
+2020-10-02 21:29:07,821 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:29:08,512 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-02 21:29:08,520 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-02 21:29:08,543 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-02 21:29:23,395 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-02 21:29:23,395 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-02 21:29:23,789 [DEBUG]  Extracted model to '/tmp/tmpukld_g7c'.
+2020-10-02 21:29:23,791 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-02 21:29:23,843 [DEBUG]  Loading the model ...
+2020-10-02 21:29:24,030 [DEBUG]  Finished loading the model.
+2020-10-02 21:29:24,030 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:29:24,872 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-02 21:29:24,875 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-02 21:29:24,875 [INFO ]  Rasa server is up and running.
+2020-10-02 21:31:22,593 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-02 21:31:22,593 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-02 21:31:22,593 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-02 21:31:22,594 [INFO ]  Enabling coroutine debugging. Loop id 94073226671328.
+2020-10-02 21:31:22,974 [DEBUG]  Extracted model to '/tmp/tmprry88xck'.
+2020-10-02 21:31:23,338 [DEBUG]  Loading the model ...
+2020-10-02 21:31:24,077 [DEBUG]  Finished loading the model.
+2020-10-02 21:31:24,077 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:31:29,666 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-02 21:31:34,269 [DEBUG]  Loading the model ...
+2020-10-02 21:31:34,748 [DEBUG]  Finished loading the model.
+2020-10-02 21:31:34,748 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:31:35,480 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-02 21:31:35,488 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-02 21:31:35,507 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-02 21:31:36,957 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-02 21:31:36,957 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-02 21:31:37,374 [DEBUG]  Extracted model to '/tmp/tmpdgst_kog'.
+2020-10-02 21:31:37,377 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-02 21:31:37,434 [DEBUG]  Loading the model ...
+2020-10-02 21:31:37,651 [DEBUG]  Finished loading the model.
+2020-10-02 21:31:37,651 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:31:38,503 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-02 21:31:38,505 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-02 21:31:38,505 [INFO ]  Rasa server is up and running.
+2020-10-02 21:53:28,772 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-02 21:53:28,772 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-02 21:53:28,773 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-02 21:53:28,773 [INFO ]  Enabling coroutine debugging. Loop id 94513988849888.
+2020-10-02 21:53:29,173 [DEBUG]  Extracted model to '/tmp/tmpvy7d0ed5'.
+2020-10-02 21:53:29,563 [DEBUG]  Loading the model ...
+2020-10-02 21:53:30,323 [DEBUG]  Finished loading the model.
+2020-10-02 21:53:30,323 [DEBUG]  Building tensorflow prediction graph...
+2020-10-02 21:53:36,075 [DEBUG]  Finished building tensorflow prediction graph.
