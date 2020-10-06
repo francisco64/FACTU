@@ -8,7 +8,7 @@ services:
       - ./:/app
     command: run -m models --credentials credentials.yml --enable-api --log-file out.log --endpoints endpoints2.yml --debug
   Action-Server:
-    image: franciscoreales1/actions:v1.1
+    image: franciscoreales1/actions:v1.2
     restart: on-failure
     volumes:
       - ./actions:/app/actions

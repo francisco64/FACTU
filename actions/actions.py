@@ -34,10 +34,10 @@ class validarRegistroUsuario(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        numeroWpp="+573003445373"
-#        if tracker.get_current_state().get('latest_input_channel')=='twilio':
-#            numeroWpp=tracker.current_state()['sender_id'].split(':')[1] 
-#        else: numeroWpp="+573003445373"
+#        numeroWpp="+573003445373"
+        if tracker.current_state().get('latest_input_channel')=='twilio':
+            numeroWpp=tracker.current_state()['sender_id'].split(':')[1] 
+        else: numeroWpp="+573003445373"
         
         datosUsuario=validarUsuario(numeroWpp)
         if datosUsuario==False:

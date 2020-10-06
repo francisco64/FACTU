@@ -79,7 +79,7 @@ def generar_link(numeroFactura,empresa,banco,correoPSE):
             browser.find_element_by_id('correo').send_keys(correoPSE)
             browser.find_element_by_xpath("//select[@id='pseCodigoBanco']/option[text()='banco']".replace('banco',banco)).click()
             browser.find_element_by_xpath("//a[@id='pagar']").click()
-            time.sleep(0.5)
+            time.sleep(1)
             #time.sleep(10.5)
             
             browser.find_element_by_id('PNEMail').send_keys(correoPSE)

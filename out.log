@@ -7612,3 +7612,1174 @@ Exception: Failed to execute custom action.
 2020-10-02 21:53:30,323 [DEBUG]  Finished loading the model.
 2020-10-02 21:53:30,323 [DEBUG]  Building tensorflow prediction graph...
 2020-10-02 21:53:36,075 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:42:50,040 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 21:42:50,040 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 21:42:50,041 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 21:42:50,043 [INFO ]  Enabling coroutine debugging. Loop id 94471970930864.
+2020-10-04 21:42:50,429 [DEBUG]  Extracted model to '/tmp/tmp5ing33m2'.
+2020-10-04 21:42:50,845 [DEBUG]  Loading the model ...
+2020-10-04 21:42:51,724 [DEBUG]  Finished loading the model.
+2020-10-04 21:42:51,725 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:42:57,350 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:43:02,076 [DEBUG]  Loading the model ...
+2020-10-04 21:43:02,512 [DEBUG]  Finished loading the model.
+2020-10-04 21:43:02,512 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:43:03,185 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:43:03,191 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 21:43:03,211 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 21:43:04,587 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 21:43:04,588 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 21:43:04,991 [DEBUG]  Extracted model to '/tmp/tmp3ida3t54'.
+2020-10-04 21:43:04,993 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 21:43:05,041 [DEBUG]  Loading the model ...
+2020-10-04 21:43:05,223 [DEBUG]  Finished loading the model.
+2020-10-04 21:43:05,223 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:43:06,064 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:43:06,067 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 21:43:06,067 [INFO ]  Rasa server is up and running.
+2020-10-04 21:44:37,150 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:37,151 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:37,151 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:37,458 [DEBUG]  The latest session for conversation ID 'whatsapp:+573003445373' has expired.
+2020-10-04 21:44:37,458 [DEBUG]  Starting a new session for conversation ID 'whatsapp:+573003445373'.
+2020-10-04 21:44:37,458 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.core.events.SessionStarted object at 0x7feb5458e250>, <rasa.core.events.ActionExecuted object at 0x7feb5458e290>]'.
+2020-10-04 21:44:37,459 [DEBUG]  Current slot values: 
+	banco: None
+	correoPSE: None
+	empresa: None
+	errorRPA: None
+	facturaRegistrada: None
+	id: None
+	nombre: None
+	numeroFactura: None
+	numeroWpp: None
+	tipoFactura: None
+	usuarioRegistrado: None
+2020-10-04 21:44:37,943 [DEBUG]  Received user message 'Hola' with intent '{'name': 'saludo', 'confidence': 0.9995293617248535}' and entities '[]'
+2020-10-04 21:44:37,944 [DEBUG]  Logged UserUtterance - tracker now has 123 events.
+2020-10-04 21:44:37,944 [DEBUG]  Current tracker state [None, None, None, {}, {'intent_saludo': 1.0, 'prev_action_listen': 1.0}]
+2020-10-04 21:44:37,945 [DEBUG]  There is a memorised next action 'utter_saludo'
+2020-10-04 21:44:37,947 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-10-04 21:44:37,947 [DEBUG]  Predicted next action 'utter_saludo' with confidence 1.00.
+2020-10-04 21:44:37,948 [DEBUG]  Action 'utter_saludo' ended with events '[BotUttered('Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del agua, gas y electricidad.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847877.9485073)]'.
+2020-10-04 21:44:37,994 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:44:37,994 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del agua, gas y electricidad.'}
+2020-10-04 21:44:38,611 [INFO ]  POST Response: 201 {"sid": "SM6e575278241c46359b29a110e30db75f", "date_created": "Sun, 04 Oct 2020 21:44:38 +0000", "date_updated": "Sun, 04 Oct 2020 21:44:38 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Hola, recuerda que conmigo te tomar\u00e1 unos segundos pagar tus facturas del agua, gas y electricidad.", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM6e575278241c46359b29a110e30db75f.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM6e575278241c46359b29a110e30db75f/Media.json"}}
+2020-10-04 21:44:38,613 [DEBUG]  Current tracker state [None, None, {}, {'intent_saludo': 1.0, 'prev_action_listen': 1.0}, {'intent_saludo': 1.0, 'prev_utter_saludo': 1.0}]
+2020-10-04 21:44:38,614 [DEBUG]  There is a memorised next action 'validarRegistro'
+2020-10-04 21:44:38,620 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 21:44:38,621 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-10-04 21:44:38,621 [DEBUG]  Predicted next action 'validarRegistro' with confidence 1.00.
+2020-10-04 21:44:38,624 [DEBUG]  Calling action endpoint to run action 'validarRegistro'.
+2020-10-04 21:44:38,877 [DEBUG]  Action 'validarRegistro' ended with events '[<rasa.core.events.SlotSet object at 0x7feb542631d0>, <rasa.core.events.SlotSet object at 0x7feb540bee50>, <rasa.core.events.SlotSet object at 0x7feb540bef10>, <rasa.core.events.SlotSet object at 0x7feb540beed0>, <rasa.core.events.SlotSet object at 0x7feb540bee90>, <rasa.core.events.SlotSet object at 0x7feb540bef90>]'.
+2020-10-04 21:44:38,878 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: None
+	errorRPA: None
+	facturaRegistrada: None
+	id: 1
+	nombre: Francisco
+	numeroFactura: None
+	numeroWpp: +573003445373
+	tipoFactura: None
+	usuarioRegistrado: si
+2020-10-04 21:44:38,880 [DEBUG]  Current tracker state [None, {}, {'intent_saludo': 1.0, 'prev_action_listen': 1.0}, {'intent_saludo': 1.0, 'prev_utter_saludo': 1.0}, {'intent_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_validarRegistro': 1.0}]
+2020-10-04 21:44:38,880 [DEBUG]  There is a memorised next action 'utter_enQueTeAyudo'
+2020-10-04 21:44:38,885 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 21:44:38,886 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-10-04 21:44:38,886 [DEBUG]  Predicted next action 'utter_enQueTeAyudo' with confidence 1.00.
+2020-10-04 21:44:38,886 [DEBUG]  Action 'utter_enQueTeAyudo' ended with events '[BotUttered('Cuéntame Francisco, en qué puedo ayudarte?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847878.8866105)]'.
+2020-10-04 21:44:38,886 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:44:38,887 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Cuéntame Francisco, en qué puedo ayudarte?'}
+2020-10-04 21:44:39,294 [INFO ]  POST Response: 201 {"sid": "SM91a57892eccc48de8685b7d83a5e6d74", "date_created": "Sun, 04 Oct 2020 21:44:39 +0000", "date_updated": "Sun, 04 Oct 2020 21:44:39 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Cu\u00e9ntame Francisco, en qu\u00e9 puedo ayudarte?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM91a57892eccc48de8685b7d83a5e6d74.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM91a57892eccc48de8685b7d83a5e6d74/Media.json"}}
+2020-10-04 21:44:39,296 [DEBUG]  Current tracker state [{}, {'intent_saludo': 1.0, 'prev_action_listen': 1.0}, {'intent_saludo': 1.0, 'prev_utter_saludo': 1.0}, {'intent_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_validarRegistro': 1.0}, {'intent_saludo': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 21:44:39,297 [DEBUG]  There is a memorised next action 'action_listen'
+2020-10-04 21:44:39,304 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 21:44:39,304 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-10-04 21:44:39,305 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2020-10-04 21:44:39,305 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:44:40,154 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:44,346 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:44,346 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:44,346 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:44,735 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:44:44,736 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: None
+	facturaRegistrada: None
+	id: 1
+	nombre: Francisco
+	numeroFactura: None
+	numeroWpp: +573003445373
+	tipoFactura: None
+	usuarioRegistrado: si
+2020-10-04 21:44:44,737 [DEBUG]  Logged UserUtterance - tracker now has 17 events.
+2020-10-04 21:44:44,738 [DEBUG]  Current tracker state [{'intent_saludo': 1.0, 'prev_action_listen': 1.0}, {'intent_saludo': 1.0, 'prev_utter_saludo': 1.0}, {'intent_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_validarRegistro': 1.0}, {'intent_saludo': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 21:44:44,738 [DEBUG]  There is no memorised next action
+2020-10-04 21:44:44,743 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:44:44,743 [DEBUG]  Predicted next action 'buscarFactura' with confidence 0.74.
+2020-10-04 21:44:44,744 [DEBUG]  Calling action endpoint to run action 'buscarFactura'.
+2020-10-04 21:44:44,928 [DEBUG]  Action 'buscarFactura' ended with events '[<rasa.core.events.SlotSet object at 0x7feb5407d110>, <rasa.core.events.SlotSet object at 0x7feb5407db90>, <rasa.core.events.SlotSet object at 0x7feb5407db10>, <rasa.core.events.SlotSet object at 0x7feb5407db50>]'.
+2020-10-04 21:44:44,929 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: None
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:44:44,931 [DEBUG]  Current tracker state [{'intent_saludo': 1.0, 'prev_utter_saludo': 1.0}, {'intent_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_validarRegistro': 1.0}, {'intent_saludo': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_buscarFactura': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:44:44,932 [DEBUG]  There is no memorised next action
+2020-10-04 21:44:44,939 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:44:44,939 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:44:44,940 [DEBUG]  Predicted next action 'utter_yaPagado' with confidence 0.98.
+2020-10-04 21:44:44,941 [DEBUG]  Action 'utter_yaPagado' ended with events '[BotUttered('Ya has pagado anteriormente una factura de gas de la entidad vanti con número 942298. Quieres pagarla nuevamente?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847884.9409628)]'.
+2020-10-04 21:44:44,941 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:44:44,942 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Ya has pagado anteriormente una factura de gas de la entidad vanti con número 942298. Quieres pagarla nuevamente?'}
+2020-10-04 21:44:45,640 [INFO ]  POST Response: 201 {"sid": "SM3500c61868a245188a5ddf244a088b51", "date_created": "Sun, 04 Oct 2020 21:44:45 +0000", "date_updated": "Sun, 04 Oct 2020 21:44:45 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Ya has pagado anteriormente una factura de gas de la entidad vanti con n\u00famero 942298. Quieres pagarla nuevamente?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM3500c61868a245188a5ddf244a088b51.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM3500c61868a245188a5ddf244a088b51/Media.json"}}
+2020-10-04 21:44:45,642 [DEBUG]  Current tracker state [{'intent_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_validarRegistro': 1.0}, {'intent_saludo': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_buscarFactura': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:44:45,643 [DEBUG]  There is no memorised next action
+2020-10-04 21:44:45,645 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:44:45,645 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:44:45,645 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 21:44:45,645 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:44:46,434 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:49,837 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:49,838 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:49,838 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:44:50,237 [DEBUG]  Received user message 'Si' with intent '{'name': 'afirmacion', 'confidence': 0.9998445510864258}' and entities '[]'
+2020-10-04 21:44:50,239 [DEBUG]  Logged UserUtterance - tracker now has 26 events.
+2020-10-04 21:44:50,241 [DEBUG]  Current tracker state [{'intent_saludo': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_buscarFactura': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_afirmacion': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:44:50,242 [DEBUG]  There is no memorised next action
+2020-10-04 21:44:50,246 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:44:50,247 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.99.
+2020-10-04 21:44:50,247 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847890.247665)]'.
+2020-10-04 21:44:50,248 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:44:50,248 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:44:50,962 [INFO ]  POST Response: 201 {"sid": "SMa23086bc83cd4e8a8614ef267553e3a6", "date_created": "Sun, 04 Oct 2020 21:44:50 +0000", "date_updated": "Sun, 04 Oct 2020 21:44:50 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMa23086bc83cd4e8a8614ef267553e3a6.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMa23086bc83cd4e8a8614ef267553e3a6/Media.json"}}
+2020-10-04 21:44:50,966 [DEBUG]  Current tracker state [{'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_buscarFactura': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_afirmacion': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:44:50,966 [DEBUG]  There is no memorised next action
+2020-10-04 21:44:50,974 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:44:50,975 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:44:50,976 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:44:50,977 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:44:56,244 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847896.244525), <rasa.core.events.SlotSet object at 0x7feb54541090>]'.
+2020-10-04 21:44:56,245 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:44:56,245 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:44:56,245 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:44:56,700 [INFO ]  POST Response: 201 {"sid": "SMdbb64fea4a134aa4a2a68cd76e2e0679", "date_created": "Sun, 04 Oct 2020 21:44:56 +0000", "date_updated": "Sun, 04 Oct 2020 21:44:56 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMdbb64fea4a134aa4a2a68cd76e2e0679.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMdbb64fea4a134aa4a2a68cd76e2e0679/Media.json"}}
+2020-10-04 21:44:56,703 [DEBUG]  Current tracker state [{'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_buscarFactura': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_afirmacion': 1.0, 'prev_action_listen': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_afirmacion': 1.0, 'slot_empresa_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:44:56,704 [DEBUG]  There is no memorised next action
+2020-10-04 21:44:56,712 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:44:56,713 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:44:56,713 [DEBUG]  Predicted next action 'action_listen' with confidence 0.56.
+2020-10-04 21:44:56,714 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:44:57,483 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:33,354 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 21:45:33,354 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 21:45:33,355 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 21:45:33,355 [INFO ]  Enabling coroutine debugging. Loop id 93985737726144.
+2020-10-04 21:45:33,763 [DEBUG]  Extracted model to '/tmp/tmpnscixpum'.
+2020-10-04 21:45:34,135 [DEBUG]  Loading the model ...
+2020-10-04 21:45:34,960 [DEBUG]  Finished loading the model.
+2020-10-04 21:45:34,960 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:45:40,943 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:45:45,757 [DEBUG]  Loading the model ...
+2020-10-04 21:45:46,243 [DEBUG]  Finished loading the model.
+2020-10-04 21:45:46,243 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:45:46,964 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:45:46,971 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 21:45:46,982 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 21:45:48,322 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 21:45:48,323 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 21:45:48,757 [DEBUG]  Extracted model to '/tmp/tmp35ai8j63'.
+2020-10-04 21:45:48,759 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 21:45:48,814 [DEBUG]  Loading the model ...
+2020-10-04 21:45:49,024 [DEBUG]  Finished loading the model.
+2020-10-04 21:45:49,024 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:45:49,936 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:45:49,939 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 21:45:49,939 [INFO ]  Rasa server is up and running.
+2020-10-04 21:45:52,194 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:52,195 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:52,195 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:52,977 [DEBUG]  Received user message 'Hola' with intent '{'name': 'saludo', 'confidence': 0.9995293617248535}' and entities '[]'
+2020-10-04 21:45:52,977 [DEBUG]  Logged UserUtterance - tracker now has 33 events.
+2020-10-04 21:45:52,978 [DEBUG]  Current tracker state [{'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:45:52,978 [DEBUG]  There is no memorised next action
+2020-10-04 21:45:52,981 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:45:52,981 [DEBUG]  Predicted next action 'utter_saludo' with confidence 0.99.
+2020-10-04 21:45:52,982 [DEBUG]  Action 'utter_saludo' ended with events '[BotUttered('Hola, recuerda que puedo ayudarte a pagar tus facturas de agua, gas y electricidad.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847952.9824784)]'.
+2020-10-04 21:45:53,023 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:45:53,023 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Hola, recuerda que puedo ayudarte a pagar tus facturas de agua, gas y electricidad.'}
+2020-10-04 21:45:53,728 [INFO ]  POST Response: 201 {"sid": "SM15d1b2b2e1b941038e37110e9bef9cf0", "date_created": "Sun, 04 Oct 2020 21:45:53 +0000", "date_updated": "Sun, 04 Oct 2020 21:45:53 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Hola, recuerda que puedo ayudarte a pagar tus facturas de agua, gas y electricidad.", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM15d1b2b2e1b941038e37110e9bef9cf0.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM15d1b2b2e1b941038e37110e9bef9cf0/Media.json"}}
+2020-10-04 21:45:53,732 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:45:53,733 [DEBUG]  There is no memorised next action
+2020-10-04 21:45:53,741 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 21:45:53,742 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:45:53,742 [DEBUG]  Predicted next action 'validarRegistro' with confidence 1.00.
+2020-10-04 21:45:53,744 [DEBUG]  Calling action endpoint to run action 'validarRegistro'.
+2020-10-04 21:45:53,921 [DEBUG]  Action 'validarRegistro' ended with events '[<rasa.core.events.SlotSet object at 0x7f86943d5fd0>, <rasa.core.events.SlotSet object at 0x7f8694463c10>, <rasa.core.events.SlotSet object at 0x7f86944d2350>, <rasa.core.events.SlotSet object at 0x7f86944d2310>, <rasa.core.events.SlotSet object at 0x7f86944d2110>, <rasa.core.events.SlotSet object at 0x7f86944d2150>]'.
+2020-10-04 21:45:53,922 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:45:53,923 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_validarRegistro': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:45:53,923 [DEBUG]  There is no memorised next action
+2020-10-04 21:45:53,927 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 21:45:53,927 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:45:53,927 [DEBUG]  Predicted next action 'utter_enQueTeAyudo' with confidence 0.99.
+2020-10-04 21:45:53,927 [DEBUG]  Action 'utter_enQueTeAyudo' ended with events '[BotUttered('En qué te puedo ayudar hoy, Francisco?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847953.9277503)]'.
+2020-10-04 21:45:53,928 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:45:53,928 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'En qué te puedo ayudar hoy, Francisco?'}
+2020-10-04 21:45:54,241 [INFO ]  POST Response: 201 {"sid": "SM54ad4237ecb74935a3f258bbb6179c4b", "date_created": "Sun, 04 Oct 2020 21:45:54 +0000", "date_updated": "Sun, 04 Oct 2020 21:45:54 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "En qu\u00e9 te puedo ayudar hoy, Francisco?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM54ad4237ecb74935a3f258bbb6179c4b.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM54ad4237ecb74935a3f258bbb6179c4b/Media.json"}}
+2020-10-04 21:45:54,245 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_validarRegistro': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:45:54,246 [DEBUG]  There is no memorised next action
+2020-10-04 21:45:54,255 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 21:45:54,255 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:45:54,256 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2020-10-04 21:45:54,256 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:45:54,985 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:59,674 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:59,674 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:45:59,675 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:46:00,079 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:46:00,080 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:46:00,080 [DEBUG]  Logged UserUtterance - tracker now has 47 events.
+2020-10-04 21:46:00,082 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_validarRegistro': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:46:00,082 [DEBUG]  There is no memorised next action
+2020-10-04 21:46:00,086 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:46:00,087 [DEBUG]  Predicted next action 'utter_confirmarFactura' with confidence 0.43.
+2020-10-04 21:46:00,087 [DEBUG]  Action 'utter_confirmarFactura' ended with events '[BotUttered('Pagaré tu factura con numero 942298, empresa vanti. Es correcto?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847960.087477)]'.
+2020-10-04 21:46:00,087 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:46:00,088 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Pagaré tu factura con numero 942298, empresa vanti. Es correcto?'}
+2020-10-04 21:46:00,674 [INFO ]  POST Response: 201 {"sid": "SMc77ab806aad243918f15b15dd9c0afb5", "date_created": "Sun, 04 Oct 2020 21:46:00 +0000", "date_updated": "Sun, 04 Oct 2020 21:46:00 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Pagar\u00e9 tu factura con numero 942298, empresa vanti. Es correcto?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc77ab806aad243918f15b15dd9c0afb5.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc77ab806aad243918f15b15dd9c0afb5/Media.json"}}
+2020-10-04 21:46:00,679 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_saludo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_validarRegistro': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:46:00,679 [DEBUG]  There is no memorised next action
+2020-10-04 21:46:00,688 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:46:00,689 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:46:00,689 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 21:46:00,690 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:46:01,544 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:46:10,334 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:46:10,335 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:46:10,335 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:46:10,734 [DEBUG]  Received user message 'Si' with intent '{'name': 'afirmacion', 'confidence': 0.9998445510864258}' and entities '[]'
+2020-10-04 21:46:10,736 [DEBUG]  Logged UserUtterance - tracker now has 51 events.
+2020-10-04 21:46:10,739 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_validarRegistro': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:46:10,740 [DEBUG]  There is no memorised next action
+2020-10-04 21:46:10,746 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:46:10,746 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.98.
+2020-10-04 21:46:10,747 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847970.7469132)]'.
+2020-10-04 21:46:10,747 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:46:10,747 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:46:11,456 [INFO ]  POST Response: 201 {"sid": "SM1985b05986f7439b85ff8b71fdacd8d9", "date_created": "Sun, 04 Oct 2020 21:46:11 +0000", "date_updated": "Sun, 04 Oct 2020 21:46:11 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM1985b05986f7439b85ff8b71fdacd8d9.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM1985b05986f7439b85ff8b71fdacd8d9/Media.json"}}
+2020-10-04 21:46:11,459 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_enQueTeAyudo': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:46:11,459 [DEBUG]  There is no memorised next action
+2020-10-04 21:46:11,462 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:46:11,462 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:46:11,462 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:46:11,463 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:46:16,881 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601847976.8806865), <rasa.core.events.SlotSet object at 0x7f8694304190>]'.
+2020-10-04 21:46:16,881 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:46:16,882 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:46:16,882 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:46:17,193 [INFO ]  POST Response: 201 {"sid": "SM6b1752f9106347409d189b4f820d6bae", "date_created": "Sun, 04 Oct 2020 21:46:17 +0000", "date_updated": "Sun, 04 Oct 2020 21:46:17 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM6b1752f9106347409d189b4f820d6bae.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM6b1752f9106347409d189b4f820d6bae/Media.json"}}
+2020-10-04 21:46:17,198 [DEBUG]  Current tracker state [{'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'intent_infoFactura': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_action_listen': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_errorRPA_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0}]
+2020-10-04 21:46:17,198 [DEBUG]  There is no memorised next action
+2020-10-04 21:46:17,209 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:46:17,209 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:46:17,210 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2020-10-04 21:46:17,210 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:46:17,993 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:50:52,023 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 21:50:52,023 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 21:50:52,024 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 21:50:52,026 [INFO ]  Enabling coroutine debugging. Loop id 93932727862592.
+2020-10-04 21:50:52,440 [DEBUG]  Extracted model to '/tmp/tmpmf2521hp'.
+2020-10-04 21:50:52,905 [DEBUG]  Loading the model ...
+2020-10-04 21:50:53,861 [DEBUG]  Finished loading the model.
+2020-10-04 21:50:53,861 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:50:59,924 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:51:04,796 [DEBUG]  Loading the model ...
+2020-10-04 21:51:05,286 [DEBUG]  Finished loading the model.
+2020-10-04 21:51:05,286 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:51:06,001 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:51:06,008 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 21:51:06,021 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 21:51:07,372 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 21:51:07,372 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 21:51:07,816 [DEBUG]  Extracted model to '/tmp/tmplvcf53no'.
+2020-10-04 21:51:07,818 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 21:51:07,876 [DEBUG]  Loading the model ...
+2020-10-04 21:51:08,084 [DEBUG]  Finished loading the model.
+2020-10-04 21:51:08,085 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:51:08,987 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:51:08,990 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 21:51:08,990 [INFO ]  Rasa server is up and running.
+2020-10-04 21:51:31,299 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:51:31,300 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:51:31,300 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:51:32,065 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:51:32,066 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:51:32,066 [DEBUG]  Logged UserUtterance - tracker now has 59 events.
+2020-10-04 21:51:32,068 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'prev_generarLinkRPA': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}]
+2020-10-04 21:51:32,068 [DEBUG]  There is no memorised next action
+2020-10-04 21:51:32,071 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:51:32,071 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.53.
+2020-10-04 21:51:32,072 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848292.0725915)]'.
+2020-10-04 21:51:32,118 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:51:32,119 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:51:32,702 [INFO ]  POST Response: 201 {"sid": "SMbed18be0fcc64048a4aa52bf1bd3e460", "date_created": "Sun, 04 Oct 2020 21:51:32 +0000", "date_updated": "Sun, 04 Oct 2020 21:51:32 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMbed18be0fcc64048a4aa52bf1bd3e460.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMbed18be0fcc64048a4aa52bf1bd3e460/Media.json"}}
+2020-10-04 21:51:32,708 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'prev_generarLinkRPA': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}]
+2020-10-04 21:51:32,708 [DEBUG]  There is no memorised next action
+2020-10-04 21:51:32,719 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:51:32,719 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:51:32,720 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:51:32,722 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:51:37,680 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848297.6803975), <rasa.core.events.SlotSet object at 0x7f389008c750>]'.
+2020-10-04 21:51:37,680 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:51:37,680 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:51:37,681 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:51:37,950 [INFO ]  POST Response: 201 {"sid": "SM816538e4f7f7484db0ff7fcee70378b7", "date_created": "Sun, 04 Oct 2020 21:51:37 +0000", "date_updated": "Sun, 04 Oct 2020 21:51:37 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM816538e4f7f7484db0ff7fcee70378b7.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM816538e4f7f7484db0ff7fcee70378b7/Media.json"}}
+2020-10-04 21:51:37,955 [DEBUG]  Current tracker state [{'slot_numeroFactura_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'prev_generarLinkRPA': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}, {'slot_numeroFactura_0': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}, {'prev_generarLinkRPA': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'entity_empresa': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0}]
+2020-10-04 21:51:37,956 [DEBUG]  There is no memorised next action
+2020-10-04 21:51:37,959 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:51:37,959 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:51:37,959 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2020-10-04 21:51:37,959 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:51:38,467 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:30,031 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 21:52:30,031 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 21:52:30,031 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 21:52:30,032 [INFO ]  Enabling coroutine debugging. Loop id 94584370911696.
+2020-10-04 21:52:30,445 [DEBUG]  Extracted model to '/tmp/tmp493dsy26'.
+2020-10-04 21:52:30,826 [DEBUG]  Loading the model ...
+2020-10-04 21:52:31,662 [DEBUG]  Finished loading the model.
+2020-10-04 21:52:31,662 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:52:37,606 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:52:42,285 [DEBUG]  Loading the model ...
+2020-10-04 21:52:42,761 [DEBUG]  Finished loading the model.
+2020-10-04 21:52:42,762 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:52:43,478 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:52:43,484 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 21:52:43,494 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 21:52:44,800 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 21:52:44,801 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 21:52:45,236 [DEBUG]  Extracted model to '/tmp/tmp_zmomjm0'.
+2020-10-04 21:52:45,237 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 21:52:45,297 [DEBUG]  Loading the model ...
+2020-10-04 21:52:45,502 [DEBUG]  Finished loading the model.
+2020-10-04 21:52:45,503 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:52:46,411 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:52:46,414 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 21:52:46,414 [INFO ]  Rasa server is up and running.
+2020-10-04 21:52:51,372 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:51,372 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:51,373 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:52,223 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:52:52,224 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:52:52,224 [DEBUG]  Logged UserUtterance - tracker now has 67 events.
+2020-10-04 21:52:52,226 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}]
+2020-10-04 21:52:52,226 [DEBUG]  There is no memorised next action
+2020-10-04 21:52:52,229 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:52:52,229 [DEBUG]  Predicted next action 'buscarFactura' with confidence 0.45.
+2020-10-04 21:52:52,230 [DEBUG]  Calling action endpoint to run action 'buscarFactura'.
+2020-10-04 21:52:52,387 [DEBUG]  Action 'buscarFactura' ended with events '[<rasa.core.events.SlotSet object at 0x7fc56c4cfb50>, <rasa.core.events.SlotSet object at 0x7fc56c598dd0>, <rasa.core.events.SlotSet object at 0x7fc56c46d8d0>, <rasa.core.events.SlotSet object at 0x7fc56c4e74d0>]'.
+2020-10-04 21:52:52,387 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:52:52,390 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_buscarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}]
+2020-10-04 21:52:52,390 [DEBUG]  There is no memorised next action
+2020-10-04 21:52:52,395 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:52:52,395 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:52:52,395 [DEBUG]  Predicted next action 'utter_yaPagado' with confidence 0.91.
+2020-10-04 21:52:52,396 [DEBUG]  Action 'utter_yaPagado' ended with events '[BotUttered('Ya has pagado anteriormente una factura de gas de la entidad vanti con número 942298. Quieres pagarla nuevamente?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848372.3965147)]'.
+2020-10-04 21:52:52,429 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:52:52,429 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Ya has pagado anteriormente una factura de gas de la entidad vanti con número 942298. Quieres pagarla nuevamente?'}
+2020-10-04 21:52:53,014 [INFO ]  POST Response: 201 {"sid": "SMcd874bc0fd9b4eeba1c0031b5b17190a", "date_created": "Sun, 04 Oct 2020 21:52:52 +0000", "date_updated": "Sun, 04 Oct 2020 21:52:52 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Ya has pagado anteriormente una factura de gas de la entidad vanti con n\u00famero 942298. Quieres pagarla nuevamente?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMcd874bc0fd9b4eeba1c0031b5b17190a.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMcd874bc0fd9b4eeba1c0031b5b17190a/Media.json"}}
+2020-10-04 21:52:53,021 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_buscarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}]
+2020-10-04 21:52:53,022 [DEBUG]  There is no memorised next action
+2020-10-04 21:52:53,033 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:52:53,034 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:52:53,035 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 21:52:53,035 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:52:53,805 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:56,535 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:56,536 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:56,536 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:52:56,940 [DEBUG]  Received user message 'Si' with intent '{'name': 'afirmacion', 'confidence': 0.9998445510864258}' and entities '[]'
+2020-10-04 21:52:56,941 [DEBUG]  Logged UserUtterance - tracker now has 76 events.
+2020-10-04 21:52:56,944 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_buscarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:52:56,945 [DEBUG]  There is no memorised next action
+2020-10-04 21:52:56,949 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:52:56,950 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.99.
+2020-10-04 21:52:56,950 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848376.9503555)]'.
+2020-10-04 21:52:56,950 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:52:56,950 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:52:57,569 [INFO ]  POST Response: 201 {"sid": "SM5f00d89cc34643ee8a5a63d2f0694ff5", "date_created": "Sun, 04 Oct 2020 21:52:57 +0000", "date_updated": "Sun, 04 Oct 2020 21:52:57 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM5f00d89cc34643ee8a5a63d2f0694ff5.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM5f00d89cc34643ee8a5a63d2f0694ff5/Media.json"}}
+2020-10-04 21:52:57,575 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_buscarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:52:57,576 [DEBUG]  There is no memorised next action
+2020-10-04 21:52:57,588 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:52:57,588 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:52:57,589 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:52:57,591 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:53:03,297 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848383.2972589), <rasa.core.events.SlotSet object at 0x7fc56c0f0510>]'.
+2020-10-04 21:53:03,298 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:53:03,298 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:53:03,299 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:53:03,573 [INFO ]  POST Response: 201 {"sid": "SMe24257dd7cca406ea10f091c68a9ce28", "date_created": "Sun, 04 Oct 2020 21:53:03 +0000", "date_updated": "Sun, 04 Oct 2020 21:53:03 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMe24257dd7cca406ea10f091c68a9ce28.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMe24257dd7cca406ea10f091c68a9ce28/Media.json"}}
+2020-10-04 21:53:03,580 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_buscarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:53:03,580 [DEBUG]  There is no memorised next action
+2020-10-04 21:53:03,592 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:53:03,592 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:53:03,593 [DEBUG]  Predicted next action 'utter_algoMas' with confidence 0.48.
+2020-10-04 21:53:03,593 [DEBUG]  Action 'utter_algoMas' ended with events '[BotUttered('Hay algo más qué pueda hacer por ti?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848383.593789)]'.
+2020-10-04 21:53:03,594 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:53:03,594 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Hay algo más qué pueda hacer por ti?'}
+2020-10-04 21:53:03,873 [INFO ]  POST Response: 201 {"sid": "SM81fcabbf45d34d0aa90fcee59411fe8b", "date_created": "Sun, 04 Oct 2020 21:53:03 +0000", "date_updated": "Sun, 04 Oct 2020 21:53:03 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Hay algo m\u00e1s qu\u00e9 pueda hacer por ti?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM81fcabbf45d34d0aa90fcee59411fe8b.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM81fcabbf45d34d0aa90fcee59411fe8b/Media.json"}}
+2020-10-04 21:53:03,879 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'intent_infoFactura': 1.0, 'prev_utter_yaPagado': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'entity_empresa': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_errorRPA_1': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_afirmacion': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:53:03,880 [DEBUG]  There is no memorised next action
+2020-10-04 21:53:03,892 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:53:03,892 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:53:03,893 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 21:53:03,893 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:53:04,682 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:02,827 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 21:56:02,828 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 21:56:02,828 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 21:56:02,829 [INFO ]  Enabling coroutine debugging. Loop id 94272190259408.
+2020-10-04 21:56:03,250 [DEBUG]  Extracted model to '/tmp/tmpg3b2tie2'.
+2020-10-04 21:56:03,630 [DEBUG]  Loading the model ...
+2020-10-04 21:56:04,454 [DEBUG]  Finished loading the model.
+2020-10-04 21:56:04,454 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:56:10,507 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:56:15,410 [DEBUG]  Loading the model ...
+2020-10-04 21:56:16,122 [DEBUG]  Finished loading the model.
+2020-10-04 21:56:16,122 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:56:16,844 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:56:16,852 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 21:56:16,876 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 21:56:18,256 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 21:56:18,256 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 21:56:18,723 [DEBUG]  Extracted model to '/tmp/tmpzki_7u20'.
+2020-10-04 21:56:18,725 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 21:56:18,785 [DEBUG]  Loading the model ...
+2020-10-04 21:56:18,993 [DEBUG]  Finished loading the model.
+2020-10-04 21:56:18,993 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:56:19,923 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:56:19,926 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 21:56:19,927 [INFO ]  Rasa server is up and running.
+2020-10-04 21:56:29,507 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:29,508 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:29,508 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:30,362 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:56:30,362 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:56:30,362 [DEBUG]  Logged UserUtterance - tracker now has 86 events.
+2020-10-04 21:56:30,364 [DEBUG]  Current tracker state [{'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0}]
+2020-10-04 21:56:30,365 [DEBUG]  There is no memorised next action
+2020-10-04 21:56:30,368 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:56:30,368 [DEBUG]  Predicted next action 'utter_confirmarFactura' with confidence 0.33.
+2020-10-04 21:56:30,370 [DEBUG]  Action 'utter_confirmarFactura' ended with events '[BotUttered('Pagaré tu factura con numero 942298, empresa vanti. Es correcto?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848590.3701553)]'.
+2020-10-04 21:56:30,415 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:56:30,416 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Pagaré tu factura con numero 942298, empresa vanti. Es correcto?'}
+2020-10-04 21:56:31,292 [INFO ]  POST Response: 201 {"sid": "SM44623de588b7425cba2e110dd5b60f48", "date_created": "Sun, 04 Oct 2020 21:56:31 +0000", "date_updated": "Sun, 04 Oct 2020 21:56:31 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Pagar\u00e9 tu factura con numero 942298, empresa vanti. Es correcto?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM44623de588b7425cba2e110dd5b60f48.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM44623de588b7425cba2e110dd5b60f48/Media.json"}}
+2020-10-04 21:56:31,296 [DEBUG]  Current tracker state [{'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'entity_empresa': 1.0}]
+2020-10-04 21:56:31,296 [DEBUG]  There is no memorised next action
+2020-10-04 21:56:31,299 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:56:31,300 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:56:31,300 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 21:56:31,300 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:56:32,145 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:34,614 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:34,614 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:34,614 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:56:34,996 [DEBUG]  Received user message 'Si' with intent '{'name': 'afirmacion', 'confidence': 0.9998445510864258}' and entities '[]'
+2020-10-04 21:56:34,997 [DEBUG]  Logged UserUtterance - tracker now has 90 events.
+2020-10-04 21:56:35,000 [DEBUG]  Current tracker state [{'slot_usuarioRegistrado_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'entity_empresa': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0, 'prev_action_listen': 1.0}]
+2020-10-04 21:56:35,001 [DEBUG]  There is no memorised next action
+2020-10-04 21:56:35,006 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:56:35,007 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.98.
+2020-10-04 21:56:35,007 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848595.0073323)]'.
+2020-10-04 21:56:35,007 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:56:35,007 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:56:35,584 [INFO ]  POST Response: 201 {"sid": "SMc8cad430d441453e8e9af5cfca22c6ad", "date_created": "Sun, 04 Oct 2020 21:56:35 +0000", "date_updated": "Sun, 04 Oct 2020 21:56:35 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc8cad430d441453e8e9af5cfca22c6ad.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc8cad430d441453e8e9af5cfca22c6ad/Media.json"}}
+2020-10-04 21:56:35,591 [DEBUG]  Current tracker state [{'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'entity_empresa': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}]
+2020-10-04 21:56:35,592 [DEBUG]  There is no memorised next action
+2020-10-04 21:56:35,604 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:56:35,605 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:56:35,605 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:56:35,607 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:56:41,403 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848601.4036057), <rasa.core.events.SlotSet object at 0x7f1c183b0a50>]'.
+2020-10-04 21:56:41,404 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:56:41,404 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:56:41,404 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:56:41,687 [INFO ]  POST Response: 201 {"sid": "SMa9b7d89afb164d88903197072310647c", "date_created": "Sun, 04 Oct 2020 21:56:41 +0000", "date_updated": "Sun, 04 Oct 2020 21:56:41 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMa9b7d89afb164d88903197072310647c.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMa9b7d89afb164d88903197072310647c/Media.json"}}
+2020-10-04 21:56:41,695 [DEBUG]  Current tracker state [{'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'intent_infoFactura': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'entity_empresa': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0, 'prev_action_listen': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'prev_utter_generareLink': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}, {'slot_usuarioRegistrado_1': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_afirmacion': 1.0}]
+2020-10-04 21:56:41,696 [DEBUG]  There is no memorised next action
+2020-10-04 21:56:41,709 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:56:41,710 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:56:41,710 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2020-10-04 21:56:41,710 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:56:42,499 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:57:43,965 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 21:57:43,966 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 21:57:43,966 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 21:57:43,967 [INFO ]  Enabling coroutine debugging. Loop id 94446721846704.
+2020-10-04 21:57:44,384 [DEBUG]  Extracted model to '/tmp/tmpyaxrbs1w'.
+2020-10-04 21:57:44,771 [DEBUG]  Loading the model ...
+2020-10-04 21:57:45,595 [DEBUG]  Finished loading the model.
+2020-10-04 21:57:45,595 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:57:51,638 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:57:56,453 [DEBUG]  Loading the model ...
+2020-10-04 21:57:57,193 [DEBUG]  Finished loading the model.
+2020-10-04 21:57:57,194 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:57:57,928 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:57:57,939 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 21:57:57,960 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 21:57:59,348 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 21:57:59,348 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 21:57:59,810 [DEBUG]  Extracted model to '/tmp/tmpbd5j0_4l'.
+2020-10-04 21:57:59,812 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 21:57:59,873 [DEBUG]  Loading the model ...
+2020-10-04 21:58:00,090 [DEBUG]  Finished loading the model.
+2020-10-04 21:58:00,090 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 21:58:01,008 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 21:58:01,011 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 21:58:01,011 [INFO ]  Rasa server is up and running.
+2020-10-04 21:58:08,849 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:08,850 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:08,851 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:09,623 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:58:09,624 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:58:09,624 [DEBUG]  Logged UserUtterance - tracker now has 98 events.
+2020-10-04 21:58:09,626 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:09,627 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:09,630 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:09,631 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.53.
+2020-10-04 21:58:09,632 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848689.6323164)]'.
+2020-10-04 21:58:09,679 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:09,679 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:58:10,291 [INFO ]  POST Response: 201 {"sid": "SM9baf42889da24cb7a350be12383dfcac", "date_created": "Sun, 04 Oct 2020 21:58:10 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:10 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM9baf42889da24cb7a350be12383dfcac.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM9baf42889da24cb7a350be12383dfcac/Media.json"}}
+2020-10-04 21:58:10,299 [DEBUG]  Current tracker state [{'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:10,300 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:10,315 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:58:10,315 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:10,316 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:58:10,318 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:58:16,453 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848696.4531024), <rasa.core.events.SlotSet object at 0x7f5fec048c50>]'.
+2020-10-04 21:58:16,453 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:58:16,453 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:16,453 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:58:16,734 [INFO ]  POST Response: 201 {"sid": "SM5f3f0f6236e049679fa07a386c59f42d", "date_created": "Sun, 04 Oct 2020 21:58:16 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:16 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM5f3f0f6236e049679fa07a386c59f42d.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM5f3f0f6236e049679fa07a386c59f42d/Media.json"}}
+2020-10-04 21:58:16,742 [DEBUG]  Current tracker state [{'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:16,743 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:16,756 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:58:16,757 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:16,757 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2020-10-04 21:58:16,758 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:58:17,333 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:21,626 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:21,627 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:21,627 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:21,920 [DEBUG]  Received user message 'Ok' with intent '{'name': 'afirmacion', 'confidence': 0.999653160572052}' and entities '[]'
+2020-10-04 21:58:21,921 [DEBUG]  Logged UserUtterance - tracker now has 105 events.
+2020-10-04 21:58:21,925 [DEBUG]  Current tracker state [{'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:21,925 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:21,931 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:21,931 [DEBUG]  Predicted next action 'guardarFactura' with confidence 0.78.
+2020-10-04 21:58:21,932 [DEBUG]  Calling action endpoint to run action 'guardarFactura'.
+2020-10-04 21:58:22,148 [DEBUG]  Action 'guardarFactura' ended with events '[BotUttered('La factura se ha guardado exitosamente', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848702.1482265)]'.
+2020-10-04 21:58:22,149 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:58:22,149 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:22,150 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'La factura se ha guardado exitosamente'}
+2020-10-04 21:58:22,715 [INFO ]  POST Response: 201 {"sid": "SMcd3f537c55fe45ccafbcab9f0998e572", "date_created": "Sun, 04 Oct 2020 21:58:22 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:22 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "La factura se ha guardado exitosamente", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMcd3f537c55fe45ccafbcab9f0998e572.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMcd3f537c55fe45ccafbcab9f0998e572/Media.json"}}
+2020-10-04 21:58:22,719 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_guardarFactura': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:22,719 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:22,722 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:58:22,722 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:22,723 [DEBUG]  Predicted next action 'utter_algoMas' with confidence 0.84.
+2020-10-04 21:58:22,723 [DEBUG]  Action 'utter_algoMas' ended with events '[BotUttered('Hay algo más qué pueda hacer por ti?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848702.7232733)]'.
+2020-10-04 21:58:22,723 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:22,723 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Hay algo más qué pueda hacer por ti?'}
+2020-10-04 21:58:23,037 [INFO ]  POST Response: 201 {"sid": "SMa30036c053b8485d8bb06d59acafc382", "date_created": "Sun, 04 Oct 2020 21:58:22 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:22 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Hay algo m\u00e1s qu\u00e9 pueda hacer por ti?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMa30036c053b8485d8bb06d59acafc382.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMa30036c053b8485d8bb06d59acafc382/Media.json"}}
+2020-10-04 21:58:23,046 [DEBUG]  Current tracker state [{'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_guardarFactura': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:23,046 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:23,062 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:58:23,063 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:23,063 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 21:58:23,064 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:58:23,553 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:37,500 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:37,501 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:37,501 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:37,877 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 21:58:37,879 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:58:37,879 [DEBUG]  Logged UserUtterance - tracker now has 112 events.
+2020-10-04 21:58:37,888 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_guardarFactura': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:37,888 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:37,898 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:37,898 [DEBUG]  Predicted next action 'utter_confirmarFactura' with confidence 0.40.
+2020-10-04 21:58:37,899 [DEBUG]  Action 'utter_confirmarFactura' ended with events '[BotUttered('Pagaré tu factura con numero 942298, empresa vanti. Es correcto?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848717.8991547)]'.
+2020-10-04 21:58:37,899 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:37,900 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Pagaré tu factura con numero 942298, empresa vanti. Es correcto?'}
+2020-10-04 21:58:38,504 [INFO ]  POST Response: 201 {"sid": "SM416f5c9699df4e59815137857545f8bf", "date_created": "Sun, 04 Oct 2020 21:58:38 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:38 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Pagar\u00e9 tu factura con numero 942298, empresa vanti. Es correcto?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM416f5c9699df4e59815137857545f8bf.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM416f5c9699df4e59815137857545f8bf/Media.json"}}
+2020-10-04 21:58:38,508 [DEBUG]  Current tracker state [{'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_guardarFactura': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:38,508 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:38,511 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 21:58:38,512 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:38,512 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2020-10-04 21:58:38,512 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:58:39,293 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:42,005 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:42,006 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:42,006 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 21:58:42,376 [DEBUG]  Received user message 'Si' with intent '{'name': 'afirmacion', 'confidence': 0.9998445510864258}' and entities '[]'
+2020-10-04 21:58:42,377 [DEBUG]  Logged UserUtterance - tracker now has 116 events.
+2020-10-04 21:58:42,382 [DEBUG]  Current tracker state [{'intent_afirmacion': 1.0, 'prev_guardarFactura': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:42,383 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:42,389 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:42,389 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.98.
+2020-10-04 21:58:42,390 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848722.3902588)]'.
+2020-10-04 21:58:42,390 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:42,390 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 21:58:43,004 [INFO ]  POST Response: 201 {"sid": "SMc195db860db9448b9b9a836d7c349005", "date_created": "Sun, 04 Oct 2020 21:58:42 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:42 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc195db860db9448b9b9a836d7c349005.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc195db860db9448b9b9a836d7c349005/Media.json"}}
+2020-10-04 21:58:43,013 [DEBUG]  Current tracker state [{'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'prev_utter_algoMas': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:43,014 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:43,028 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:58:43,028 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:43,029 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 21:58:43,031 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 21:58:46,568 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601848726.5680666), <rasa.core.events.SlotSet object at 0x7f5fe46c7690>]'.
+2020-10-04 21:58:46,568 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 21:58:46,568 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 21:58:46,568 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 21:58:46,835 [INFO ]  POST Response: 201 {"sid": "SMcbb8a4dd9cb440fa87b9e1338b7dbfa8", "date_created": "Sun, 04 Oct 2020 21:58:46 +0000", "date_updated": "Sun, 04 Oct 2020 21:58:46 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMcbb8a4dd9cb440fa87b9e1338b7dbfa8.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMcbb8a4dd9cb440fa87b9e1338b7dbfa8/Media.json"}}
+2020-10-04 21:58:46,844 [DEBUG]  Current tracker state [{'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'entity_empresa': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'intent_infoFactura': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_action_listen': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'prev_utter_generareLink': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}, {'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_numeroFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_usuarioRegistrado_1': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_empresa_0': 1.0}]
+2020-10-04 21:58:46,845 [DEBUG]  There is no memorised next action
+2020-10-04 21:58:46,859 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 21:58:46,860 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 21:58:46,860 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2020-10-04 21:58:46,861 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 21:58:47,608 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:06,867 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/webhooks/facebook                                 GET                            fb_webhook.health
+/webhooks/facebook/webhook                         GET                            fb_webhook.token_verification
+/webhooks/facebook/webhook                         POST                           fb_webhook.webhook
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id>/trigger_intent    POST                           trigger_intent
+/webhooks/twilio                                   GET                            twilio_webhook.health
+/webhooks/twilio/webhook                           POST                           twilio_webhook.message
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-10-04 22:05:06,867 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-04 22:05:06,868 [DEBUG]  Using the default number of Sanic workers (1).
+2020-10-04 22:05:06,870 [INFO ]  Enabling coroutine debugging. Loop id 93874967751888.
+2020-10-04 22:05:07,299 [DEBUG]  Extracted model to '/tmp/tmp_q3drbsl'.
+2020-10-04 22:05:07,715 [DEBUG]  Loading the model ...
+2020-10-04 22:05:08,676 [DEBUG]  Finished loading the model.
+2020-10-04 22:05:08,676 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 22:05:14,712 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 22:05:19,601 [DEBUG]  Loading the model ...
+2020-10-04 22:05:20,107 [DEBUG]  Finished loading the model.
+2020-10-04 22:05:20,108 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 22:05:20,824 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 22:05:20,833 [DEBUG]  SQLEventBroker: Connecting to database: 'sqlite:///events.db'.
+2020-10-04 22:05:20,852 [DEBUG]  Instantiated event broker to 'SQLEventBroker'.
+2020-10-04 22:05:22,266 [DEBUG]  Connected to MongoTrackerStore.
+2020-10-04 22:05:22,266 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-10-04 22:05:22,715 [DEBUG]  Extracted model to '/tmp/tmpl9wk8j_2'.
+2020-10-04 22:05:22,718 [DEBUG]  Using yaml library: /opt/venv/lib/python3.7/site-packages/ruamel/yaml/__init__.py
+2020-10-04 22:05:22,778 [DEBUG]  Loading the model ...
+2020-10-04 22:05:22,991 [DEBUG]  Finished loading the model.
+2020-10-04 22:05:22,991 [DEBUG]  Building tensorflow prediction graph...
+2020-10-04 22:05:23,898 [DEBUG]  Finished building tensorflow prediction graph.
+2020-10-04 22:05:23,901 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2020-10-04 22:05:23,901 [INFO ]  Rasa server is up and running.
+2020-10-04 22:05:27,788 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:27,788 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:27,789 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:28,654 [DEBUG]  Received user message 'Hola' with intent '{'name': 'saludo', 'confidence': 0.9995293617248535}' and entities '[]'
+2020-10-04 22:05:28,655 [DEBUG]  Logged UserUtterance - tracker now has 123 events.
+2020-10-04 22:05:28,657 [DEBUG]  Current tracker state [{'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:28,658 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:28,662 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:28,662 [DEBUG]  Predicted next action 'utter_saludo' with confidence 0.99.
+2020-10-04 22:05:28,663 [DEBUG]  Action 'utter_saludo' ended with events '[BotUttered('Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del agua, gas y electricidad.', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601849128.663232)]'.
+2020-10-04 22:05:28,710 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 22:05:28,711 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Hola, recuerda que conmigo te tomará unos segundos pagar tus facturas del agua, gas y electricidad.'}
+2020-10-04 22:05:29,321 [INFO ]  POST Response: 201 {"sid": "SMb20b875653b843d3aec8863c41295522", "date_created": "Sun, 04 Oct 2020 22:05:29 +0000", "date_updated": "Sun, 04 Oct 2020 22:05:29 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Hola, recuerda que conmigo te tomar\u00e1 unos segundos pagar tus facturas del agua, gas y electricidad.", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMb20b875653b843d3aec8863c41295522.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMb20b875653b843d3aec8863c41295522/Media.json"}}
+2020-10-04 22:05:29,326 [DEBUG]  Current tracker state [{'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_utter_saludo': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:29,326 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:29,330 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 22:05:29,330 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:29,330 [DEBUG]  Predicted next action 'validarRegistro' with confidence 1.00.
+2020-10-04 22:05:29,331 [DEBUG]  Calling action endpoint to run action 'validarRegistro'.
+2020-10-04 22:05:29,513 [DEBUG]  Action 'validarRegistro' ended with events '[<rasa.core.events.SlotSet object at 0x7fd7781d6990>, <rasa.core.events.SlotSet object at 0x7fd77829ae90>, <rasa.core.events.SlotSet object at 0x7fd778374650>, <rasa.core.events.SlotSet object at 0x7fd7783745d0>, <rasa.core.events.SlotSet object at 0x7fd778374610>, <rasa.core.events.SlotSet object at 0x7fd778374590>]'.
+2020-10-04 22:05:29,513 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 22:05:29,517 [DEBUG]  Current tracker state [{'prev_utter_generareLink': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_utter_saludo': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_validarRegistro': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:29,518 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:29,523 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 22:05:29,523 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:29,523 [DEBUG]  Predicted next action 'utter_enQueTeAyudo' with confidence 0.99.
+2020-10-04 22:05:29,523 [DEBUG]  Action 'utter_enQueTeAyudo' ended with events '[BotUttered('Cuéntame Francisco, en qué puedo ayudarte?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601849129.523702)]'.
+2020-10-04 22:05:29,523 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 22:05:29,524 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Cuéntame Francisco, en qué puedo ayudarte?'}
+2020-10-04 22:05:29,814 [INFO ]  POST Response: 201 {"sid": "SMc2ea5ade90ef4b5f99527541f667f9fa", "date_created": "Sun, 04 Oct 2020 22:05:29 +0000", "date_updated": "Sun, 04 Oct 2020 22:05:29 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Cu\u00e9ntame Francisco, en qu\u00e9 puedo ayudarte?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc2ea5ade90ef4b5f99527541f667f9fa.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMc2ea5ade90ef4b5f99527541f667f9fa/Media.json"}}
+2020-10-04 22:05:29,824 [DEBUG]  Current tracker state [{'slot_tipoFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_utter_saludo': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_validarRegistro': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_enQueTeAyudo': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:29,825 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:29,840 [DEBUG]  There is no mapped action for the predicted intent, 'saludo'.
+2020-10-04 22:05:29,841 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:29,841 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2020-10-04 22:05:29,842 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 22:05:30,739 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:36,769 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:36,770 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:36,770 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:37,251 [DEBUG]  Received user message 'Paga vanti' with intent '{'name': 'infoFactura', 'confidence': 0.9898802042007446}' and entities '[{'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}, {'entity': 'empresa', 'start': 5, 'end': 10, 'value': 'vanti', 'extractor': 'DIETClassifier'}]'
+2020-10-04 22:05:37,252 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 22:05:37,252 [DEBUG]  Logged UserUtterance - tracker now has 137 events.
+2020-10-04 22:05:37,256 [DEBUG]  Current tracker state [{'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_utter_saludo': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_validarRegistro': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_enQueTeAyudo': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:37,256 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:37,262 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:37,263 [DEBUG]  Predicted next action 'utter_confirmarFactura' with confidence 0.43.
+2020-10-04 22:05:37,263 [DEBUG]  Action 'utter_confirmarFactura' ended with events '[BotUttered('Pagaré tu factura con numero 942298, empresa vanti. Es correcto?', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601849137.2636256)]'.
+2020-10-04 22:05:37,264 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 22:05:37,264 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Pagaré tu factura con numero 942298, empresa vanti. Es correcto?'}
+2020-10-04 22:05:38,010 [INFO ]  POST Response: 201 {"sid": "SM5e252da96067477680c226dc6c99ad18", "date_created": "Sun, 04 Oct 2020 22:05:37 +0000", "date_updated": "Sun, 04 Oct 2020 22:05:37 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Pagar\u00e9 tu factura con numero 942298, empresa vanti. Es correcto?", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM5e252da96067477680c226dc6c99ad18.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM5e252da96067477680c226dc6c99ad18/Media.json"}}
+2020-10-04 22:05:38,022 [DEBUG]  Current tracker state [{'slot_tipoFactura_0': 1.0, 'prev_utter_saludo': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_validarRegistro': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_enQueTeAyudo': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:38,023 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:38,037 [DEBUG]  There is no mapped action for the predicted intent, 'infoFactura'.
+2020-10-04 22:05:38,038 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:38,038 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2020-10-04 22:05:38,038 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 22:05:38,958 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:44,544 [DEBUG]  Issuing ticket for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:44,544 [DEBUG]  Acquiring lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:44,545 [DEBUG]  Acquired lock for conversation 'whatsapp:+573003445373'.
+2020-10-04 22:05:45,040 [DEBUG]  Received user message 'Si' with intent '{'name': 'afirmacion', 'confidence': 0.9998445510864258}' and entities '[]'
+2020-10-04 22:05:45,041 [DEBUG]  Logged UserUtterance - tracker now has 141 events.
+2020-10-04 22:05:45,045 [DEBUG]  Current tracker state [{'prev_validarRegistro': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_enQueTeAyudo': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:45,045 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:45,050 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:45,051 [DEBUG]  Predicted next action 'utter_generareLink' with confidence 0.98.
+2020-10-04 22:05:45,051 [DEBUG]  Action 'utter_generareLink' ended with events '[BotUttered('Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601849145.0512867)]'.
+2020-10-04 22:05:45,051 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 22:05:45,051 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Generaré el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad'}
+2020-10-04 22:05:45,638 [INFO ]  POST Response: 201 {"sid": "SMe5fbcf3078db4143ad87b0bc84c3dd95", "date_created": "Sun, 04 Oct 2020 22:05:45 +0000", "date_updated": "Sun, 04 Oct 2020 22:05:45 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Generar\u00e9 el link de pago para la factura 942298, empresa vanti. Recuerda que tienes alrededor de 10 minutos para pagar por cuestiones de seguridad", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMe5fbcf3078db4143ad87b0bc84c3dd95.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMe5fbcf3078db4143ad87b0bc84c3dd95/Media.json"}}
+2020-10-04 22:05:45,649 [DEBUG]  Current tracker state [{'prev_utter_enQueTeAyudo': 1.0, 'slot_tipoFactura_0': 1.0, 'intent_saludo': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:45,650 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:45,658 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 22:05:45,658 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:45,658 [DEBUG]  Predicted next action 'generarLinkRPA' with confidence 0.99.
+2020-10-04 22:05:45,659 [DEBUG]  Calling action endpoint to run action 'generarLinkRPA'.
+2020-10-04 22:05:51,373 [DEBUG]  Action 'generarLinkRPA' ended with events '[BotUttered('Parece ser que hubo un error', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {}, 1601849151.3730264), <rasa.core.events.SlotSet object at 0x7fd77811d610>]'.
+2020-10-04 22:05:51,373 [DEBUG]  Current slot values: 
+	banco: BANCO DAVIVIENDA
+	correoPSE: freales@javeriana.edu.co
+	empresa: vanti
+	errorRPA: si
+	facturaRegistrada: si
+	id: 1
+	nombre: Francisco
+	numeroFactura: 942298
+	numeroWpp: +573003445373
+	tipoFactura: gas
+	usuarioRegistrado: si
+2020-10-04 22:05:51,374 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-04 22:05:51,374 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Parece ser que hubo un error'}
+2020-10-04 22:05:51,706 [INFO ]  POST Response: 201 {"sid": "SMee5d2e110c3e43419a3724ad199b8149", "date_created": "Sun, 04 Oct 2020 22:05:51 +0000", "date_updated": "Sun, 04 Oct 2020 22:05:51 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Parece ser que hubo un error", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMee5d2e110c3e43419a3724ad199b8149.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMee5d2e110c3e43419a3724ad199b8149/Media.json"}}
+2020-10-04 22:05:51,716 [DEBUG]  Current tracker state [{'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'entity_empresa': 1.0, 'slot_tipoFactura_0': 1.0, 'prev_utter_confirmarFactura': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'intent_infoFactura': 1.0, 'slot_empresa_0': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'prev_action_listen': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'prev_utter_generareLink': 1.0, 'slot_tipoFactura_0': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}, {'slot_tipoFactura_0': 1.0, 'prev_generarLinkRPA': 1.0, 'slot_errorRPA_1': 1.0, 'slot_numeroFactura_0': 1.0, 'slot_empresa_0': 1.0, 'intent_afirmacion': 1.0, 'slot_facturaRegistrada_1': 1.0, 'slot_usuarioRegistrado_1': 1.0}]
+2020-10-04 22:05:51,717 [DEBUG]  There is no memorised next action
+2020-10-04 22:05:51,733 [DEBUG]  There is no mapped action for the predicted intent, 'afirmacion'.
+2020-10-04 22:05:51,733 [DEBUG]  Predicted next action using policy_1_TEDPolicy
+2020-10-04 22:05:51,734 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2020-10-04 22:05:51,734 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2020-10-04 22:05:52,651 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
