@@ -12,8 +12,10 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from actions.factuSQL import validarUsuario, validarFactura, registrarFacturaDB, guardarFB
-from actions.RPA_pagos import generar_link
+from actions.factuSQL import *
+
+import asyncio
+import aiohttp
 
 def generarTipoFactura(empresa):
     switcher={
@@ -77,31 +79,44 @@ class BuscarFactura(Action):
             numeroFactura=datosFactura[0]
             print('la factura si esta registrada: '+'Factura de '+tipoFactura+' con numero '+numeroFactura+'de la empresa '+empresa)
             return[SlotSet('facturaRegistrada', 'si'),SlotSet('tipoFactura', tipoFactura),SlotSet('empresa', empresa),SlotSet('numeroFactura', numeroFactura)]
+
+# def get_link(numeroFactura,empresa,banco,correoPSE,sender_id):
+
+#     response = requests.get(
+#         'http://localhost:5000/',
+#         params={'numeroFactura': numeroFactura, 'empresa':empresa,'banco':banco,'correoPSE':correoPSE,'sender_id':sender_id},
+#         )
+#     return(response)
+
+
 class GenerarLink(Action):
 
     def name(self) -> Text:
         return "generarLinkRPA"
 
-    def run(self, dispatcher: CollectingDispatcher,
+    async def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         empresa=tracker.get_slot('empresa')
         banco=tracker.get_slot('banco')
-        print('el banco es :'+str(banco))
         correoPSE=tracker.get_slot('correoPSE')
         numeroFactura=tracker.get_slot('numeroFactura')
-        link=generar_link(numeroFactura,empresa,banco,correoPSE)
-        #link=''
+        sender_id=tracker.current_state()['sender_id']
+        #get_link(numeroFactura,empresa,banco,correoPSE,sender_id)
+        params={'numeroFactura': numeroFactura, 'empresa':empresa,'banco':banco,'correoPSE':correoPSE,'sender_id':sender_id}
+        async with aiohttp.ClientSession() as session:
+            async with session.get('http://localhost:5000/',params=params) as resp:
+                print(resp.status)
+                link=await resp.text()
+        print(link)
         if len(link)>2:
             error=False
         else: error =True    
         if error==False:
-            #tracker.slots['errorRPA']='no'
             print('no hay error')
             dispatcher.utter_message(text='Puedes pagar tu factura en este link de '+tracker.get_slot('banco')+': '+link)
             return[SlotSet('errorRPA', 'no')]
         else:
-            #tracker.slots['errorRPA']='si'
             print('hubo un error')
             dispatcher.utter_message(text='Parece ser que hubo un error')
             return[SlotSet('errorRPA', 'si')]
@@ -141,4 +156,32 @@ class GuardarFeedback(Action):
             feed_back=tracker.latest_message['text']
             guardarFB(id_usuario,nombre_usuario,correo_pse,numero_wpp,feed_back)
             return []
-                        
+
+
+class DarLink(Action):
+
+    def name(self) -> Text:
+        return "darLink"
+
+    async def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        msj = tracker.latest_message['text']
+        print('se ejecuto dar link')
+        print('este es el mensaje: '+msj)
+        if msj=='el link no se pudo generar':
+            error = True
+        else:
+            error = False
+        if error == False:
+            print('no hay error')
+            dispatcher.utter_message(
+                text='Puedes pagar tu factura en este link de ' + tracker.get_slot('banco') + ': ' + msj)
+            #return [SlotSet('errorRPA', 'no')]
+            return[]
+        else:
+            print('hubo un error')
+            dispatcher.utter_message(text='Parece ser que hubo un error')
+            #return [SlotSet('errorRPA', 'si')]
+            return[]

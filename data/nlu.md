@@ -282,6 +282,12 @@
 - buenisima
 - muy util       
 
+## intent:infoLink
+- https://www.davivienda.com/wps/portal/PSE/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zi3T19DDwsTAz8DVycXAwCnX1MDUI9DA0dvU31wwkpiAJKG-AAjgZA_VGElHjpR6Xn5CcBXRPupB9ZqWpgEewbqF-QG2GgG-WoCAB-WuhK/dz/d5/L2dBISEvZ0FBIS9nQSEh/?trazabilityCode=763665279#access-denied
+- https://www.davivienda.com/wps/portal/PSE/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8zi3T19DDwsTAz8DVycXAwCnX1MDUI9DA0dvU31wwkpiAJKG-AAjgZA_VGElHjpR6Xn5CcBXRPupB-ZEu5kkeKoX5AbYaAb5agIAPJX7xI!/dz/d5/L2dBISEvZ0FBIS9nQSEh/?trazabilityCode=763662981#access-denied
+- el link no se pudo generar
+- el link no se pudo generar
+
 ## synonym:acueducto de bogota
 - acueducto de bogotá
 - acueducto de Bogotá
