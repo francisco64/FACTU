@@ -19,6 +19,8 @@ entities:
 - empresa
 - tipoFactura
 slots:
+  link:
+    type: unfeaturized
   banco:
     type: unfeaturized
   correoPSE:

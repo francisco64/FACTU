@@ -233,27 +233,28 @@ def generar_link():
             print('tiempo del proceso: ' + str(end - start) + ' segundos')
             url=browser.current_url
             browser.close()
-        return(url)
-    
-        # headers = {'Content-type': 'application/json',}
-        # data = '{"sender":"sender_id", "message":"msj"}'.replace('msj',url).replace('sender_id',sender_id)
         
-        # response = requests.post('https://04729ef77836.ngrok.io/webhooks/twilio/webhook', headers=headers, data=data)
-        # print('status code: '+str(response.status_code))
-        # if response.status_code != 200:
-        #     data = '{"sender":"sender_id", "message":"msj"}'.replace('msj','el link no se pudo generar').replace('sender_id',sender_id)
-        #     response = requests.post('https://localhost:5005/webhooks/twilio/webhook', headers=headers, data=data)
+
+        headers = {'Content-Type': 'application/json',}
+
+        params = (('output_channel', 'twilio'),)
+
+        data = '{"name": "infoLink", "entities": {"link": "url"}}'.replace('url',url)
+
+        response = requests.post('http://localhost:5005/conversations/sender_id/trigger_intent'.replace('sender_id',sender_id), headers=headers, params=params, data=data)
+        return('')
     except:
             print('no funciono')
-            #browser.set_window_size(1920, 4000)
-            #browser.save_screenshot("./screenshot.png")
+
             browser.close()
-            return(url)
-            # headers = {'Content-type': 'application/json',}
-            # data = '{"sender":"sender_id", "message":"msj"}'.replace('msj','el link no se pudo generar').replace('sender_id',sender_id)
-            # response = requests.post('https://04729ef77836.ngrok.io/webhooks/twilio/webhook', headers=headers, data=data)
+            headers = {'Content-Type': 'application/json',}
 
+            params = (('output_channel', 'twilio'),)
 
+            data = '{"name": "infoLink", "entities": {"link": "url"}}'.replace('url','')
+
+            response = requests.post('http://localhost:5005/conversations/sender_id/trigger_intent'.replace('sender_id',sender_id), headers=headers, params=params, data=data)
+            return('')
 if __name__ == '__main__':
     app.debug = True
     app.run(host='0.0.0.0', port=5000)

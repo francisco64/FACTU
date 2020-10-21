@@ -167,21 +167,10 @@ class DarLink(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        msj = tracker.latest_message['text']
-        print('se ejecuto dar link')
-        print('este es el mensaje: '+msj)
-        if msj=='el link no se pudo generar':
-            error = True
+        link=tracker.get_slot('banco')#cambiar por link
+        if True:
+            dispatcher.utter_message(text='Puedes pagar tu factura en: '+link)
         else:
-            error = False
-        if error == False:
-            print('no hay error')
-            dispatcher.utter_message(
-                text='Puedes pagar tu factura en este link de ' + tracker.get_slot('banco') + ': ' + msj)
-            #return [SlotSet('errorRPA', 'no')]
-            return[]
-        else:
-            print('hubo un error')
-            dispatcher.utter_message(text='Parece ser que hubo un error')
-            #return [SlotSet('errorRPA', 'si')]
-            return[]
+            dispatcher.utter_message(text='no se pudo generar link')
+
+        return[]

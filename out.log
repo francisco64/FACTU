@@ -8783,3 +8783,70 @@ Exception: Failed to execute custom action.
 2020-10-04 22:05:51,734 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
 2020-10-04 22:05:51,734 [DEBUG]  Action 'action_listen' ended with events '[]'.
 2020-10-04 22:05:52,651 [DEBUG]  Deleted lock for conversation 'whatsapp:+573003445373'.
+2020-10-20 21:54:34,055 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-10-20 21:54:46,403 [INFO ]  Rasa server is up and running.
+2020-10-20 21:55:16,274 [ERROR]  Encountered an exception while running action 'darLink'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-10-20 22:00:21,800 [ERROR]  Encountered an exception while running action 'darLink'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-10-20 22:04:54,403 [ERROR]  Encountered an exception while running action 'darLink'. Bot will continue, but the actions events are lost. Please check the logs of your action server for more information.
+2020-10-20 22:05:49,888 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:05:49,888 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:05:50,632 [INFO ]  POST Response: 201 {"sid": "SM49207989ebe04368aff114cdcede2e98", "date_created": "Wed, 21 Oct 2020 03:05:50 +0000", "date_updated": "Wed, 21 Oct 2020 03:05:50 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM49207989ebe04368aff114cdcede2e98.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM49207989ebe04368aff114cdcede2e98/Media.json"}}
+2020-10-20 22:06:22,122 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:06:22,122 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:06:23,298 [INFO ]  POST Response: 201 {"sid": "SMda263a4faf7e466cad333d77060c2cb9", "date_created": "Wed, 21 Oct 2020 03:06:23 +0000", "date_updated": "Wed, 21 Oct 2020 03:06:23 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMda263a4faf7e466cad333d77060c2cb9.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMda263a4faf7e466cad333d77060c2cb9/Media.json"}}
+2020-10-20 22:06:31,467 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:06:31,467 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:06:32,311 [INFO ]  POST Response: 201 {"sid": "SM6722bb13d5b84ea098c2540f38ddc6cc", "date_created": "Wed, 21 Oct 2020 03:06:32 +0000", "date_updated": "Wed, 21 Oct 2020 03:06:32 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM6722bb13d5b84ea098c2540f38ddc6cc.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM6722bb13d5b84ea098c2540f38ddc6cc/Media.json"}}
+2020-10-20 22:06:39,815 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:06:39,816 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:06:47,773 [INFO ]  POST Response: 201 {"sid": "SMf47536a8cfd64954a0a8d9651188c4b3", "date_created": "Wed, 21 Oct 2020 03:06:40 +0000", "date_updated": "Wed, 21 Oct 2020 03:06:40 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMf47536a8cfd64954a0a8d9651188c4b3.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SMf47536a8cfd64954a0a8d9651188c4b3/Media.json"}}
+2020-10-20 22:07:08,297 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:07:08,298 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:07:08,965 [INFO ]  POST Response: 201 {"sid": "SM8cf057ad02214ff6814d7d954dea0765", "date_created": "Wed, 21 Oct 2020 03:07:08 +0000", "date_updated": "Wed, 21 Oct 2020 03:07:08 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM8cf057ad02214ff6814d7d954dea0765.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM8cf057ad02214ff6814d7d954dea0765/Media.json"}}
+2020-10-20 22:11:45,501 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/server.py", line 276, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2020-10-20 22:12:20,175 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:12:20,175 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:12:20,986 [INFO ]  POST Response: 201 {"sid": "SM984ad0479ef9462ea46b869ae5d3c35c", "date_created": "Wed, 21 Oct 2020 03:12:20 +0000", "date_updated": "Wed, 21 Oct 2020 03:12:20 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM984ad0479ef9462ea46b869ae5d3c35c.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM984ad0479ef9462ea46b869ae5d3c35c/Media.json"}}
+2020-10-20 22:20:13,300 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/server.py", line 276, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2020-10-20 22:20:26,893 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversations/whatsapp:+573003445373/trigger_intent?output_channel=twilio'
+Traceback (most recent call last):
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/request.py", line 173, in load_json
+    self.parsed_json = loads(self.body)
+ValueError: Unexpected character in found when decoding object value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/app.py", line 976, in handle_request
+    response = await response
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/rasa/server.py", line 180, in decorated
+    result = await result
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/rasa/server.py", line 639, in trigger_intent
+    request_params = request.json
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/request.py", line 167, in json
+    self.load_json()
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/request.py", line 177, in load_json
+    raise InvalidUsage("Failed when parsing body as json")
+sanic.exceptions.InvalidUsage: Failed when parsing body as json
+2020-10-20 22:22:28,030 [ERROR]  Exception occurred while handling uri: unknown
+Traceback (most recent call last):
+  File "/home/francisco/anaconda3/envs/FACTU/lib/python3.7/site-packages/sanic/server.py", line 276, in data_received
+    self.parser.feed_data(data)
+  File "httptools/parser/parser.pyx", line 193, in httptools.parser.parser.HttpParser.feed_data
+httptools.parser.errors.HttpParserInvalidMethodError: invalid HTTP method
+2020-10-20 22:22:36,418 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:22:36,422 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:22:37,446 [INFO ]  POST Response: 201 {"sid": "SM203731d570da4000b87c7ef58a1efc40", "date_created": "Wed, 21 Oct 2020 03:22:37 +0000", "date_updated": "Wed, 21 Oct 2020 03:22:37 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM203731d570da4000b87c7ef58a1efc40.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM203731d570da4000b87c7ef58a1efc40/Media.json"}}
+2020-10-20 22:22:52,774 [INFO ]  POST Request: https://api.twilio.com/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages.json
+2020-10-20 22:22:52,774 [INFO ]  PAYLOAD: {'To': 'whatsapp:+573003445373', 'From': 'whatsapp:+14155238886', 'Body': 'Puedes pagar tu factura en este link de'}
+2020-10-20 22:22:53,511 [INFO ]  POST Response: 201 {"sid": "SM4c67772e27df4eee8174b4a46cbb1524", "date_created": "Wed, 21 Oct 2020 03:22:53 +0000", "date_updated": "Wed, 21 Oct 2020 03:22:53 +0000", "date_sent": null, "account_sid": "AC95c6b8907a146a0fae52da3ebee694cc", "to": "whatsapp:+573003445373", "from": "whatsapp:+14155238886", "messaging_service_sid": null, "body": "Puedes pagar tu factura en este link de", "status": "queued", "num_segments": "1", "num_media": "0", "direction": "outbound-api", "api_version": "2010-04-01", "price": null, "price_unit": null, "error_code": null, "error_message": null, "uri": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM4c67772e27df4eee8174b4a46cbb1524.json", "subresource_uris": {"media": "/2010-04-01/Accounts/AC95c6b8907a146a0fae52da3ebee694cc/Messages/SM4c67772e27df4eee8174b4a46cbb1524/Media.json"}}
