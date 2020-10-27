@@ -18,6 +18,7 @@ entities:
 - numeroFactura
 - empresa
 - tipoFactura
+- banco
 slots:
   link:
     type: unfeaturized

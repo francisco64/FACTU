@@ -72,7 +72,26 @@ def guardarFB(id_usuario,nombre_usuario,correo_pse,numero_wpp,feed_back):
         print("no se pudo guardar")
         return []
 
-
+def obtenerLink(id_usuario):
+    
+    if id_usuario is not None:
+        
+        consulta='''select link FROM linkGenerated 
+        INNER JOIN userData
+        ON usuarios.userData.id  = usuarios.linkGenerated.id
+        where usuarios.userData.id = id_usuario 
+        ;'''.replace('id_usuario',id_usuario)
+        cursor.execute(consulta)
+        links=cursor.fetchall()
+        return(links)
+        # if len(links)==0:
+        #     return(False)
+        # elif len(links[0][0])==0:
+        #     return(False)
+        # else:
+        #     return(links[0][0])
+        
+        
 db=sql.connect('factu-db.c15hdm9dgrjl.us-east-2.rds.amazonaws.com','admin','Hostinguer.123')
 
 cursor=db.cursor()

@@ -13,6 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from actions.factuSQL import *
+import time
 
 import asyncio
 import aiohttp
@@ -102,23 +103,23 @@ class GenerarLink(Action):
         correoPSE=tracker.get_slot('correoPSE')
         numeroFactura=tracker.get_slot('numeroFactura')
         sender_id=tracker.current_state()['sender_id']
+        id=tracker.get_slot('id')
         #get_link(numeroFactura,empresa,banco,correoPSE,sender_id)
-        params={'numeroFactura': numeroFactura, 'empresa':empresa,'banco':banco,'correoPSE':correoPSE,'sender_id':sender_id}
+        params={'numeroFactura': numeroFactura, 'empresa':empresa,'banco':banco,'correoPSE':correoPSE,'sender_id':sender_id,'id':id}
         async with aiohttp.ClientSession() as session:
-            async with session.get('http://localhost:5000/',params=params) as resp:
-                print(resp.status)
-                link=await resp.text()
-        print(link)
+            await session.post('http://localhost:5000/',params=params) 
+        link=''
         if len(link)>2:
             error=False
-        else: error =True    
+        else: error =True
+        
         if error==False:
             print('no hay error')
-            dispatcher.utter_message(text='Puedes pagar tu factura en este link de '+tracker.get_slot('banco')+': '+link)
+
             return[SlotSet('errorRPA', 'no')]
         else:
             print('hubo un error')
-            dispatcher.utter_message(text='Parece ser que hubo un error')
+
             return[SlotSet('errorRPA', 'si')]
 
 class guardarFactura(Action):
@@ -163,14 +164,20 @@ class DarLink(Action):
     def name(self) -> Text:
         return "darLink"
 
-    async def run(self, dispatcher: CollectingDispatcher,
+    def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        link=tracker.get_slot('banco')#cambiar por link
-        if True:
+        link=tracker.latest_message['entities'][0]['value']
+
+        if len(link)==0:
+            error=True
+        else:
+            error=False
+        
+        if error==False:
             dispatcher.utter_message(text='Puedes pagar tu factura en: '+link)
         else:
+        
             dispatcher.utter_message(text='no se pudo generar link')
-
-        return[]
+        return []
